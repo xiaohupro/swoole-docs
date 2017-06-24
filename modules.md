@@ -10,7 +10,7 @@ Swoole server provide the API to write TCP/UDP/UnixSocket/HTTP/WebSocket servers
 
 ### [swoole\_redis\_server](/modules/swoole-redis-server.md)
 
-## [swoole\_client](/modules/swoole-clinet.md) {#entry_h2_1}
+## [swoole\_client](/modules/swoole-client.md) {#entry_h2_1}
 
 Swoole client provide the API to write TCP/UDP/UnixSocket/HTTP clients, supports IPv4/IPv6 protocol. Developers can write sync or async client side features with swoole client API.
 
