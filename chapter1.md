@@ -2,13 +2,13 @@
 
 Swoole framework is released as a PHP extension \(PECL\) and run as a CLI application.
 
-Installation
+[Installation](/chapter1/installation.md)
+
+
 
 #### 
 
-
-
-####  
+#### 
 
 
 
