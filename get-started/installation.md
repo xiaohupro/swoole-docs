@@ -14,22 +14,27 @@
 
 ##### Debian and Ubuntu users
 
-`pecl install swoole`
+``` bash
+pecl install swoole
+```
 
 ##### Fedora and RedHat users
 
-`pecl install swoole`
+``` bash
+pecl install swoole
+```
 
 ##### MacOS X \(macOS\) users
 
 It is highly recommended to install Swoole on Mac OS X or macOS systems via homebrew:
 
-`brew install swoole`
+``` bash
+brew install swoole
+```
 
 ##### Building swoole from sources
 
-```
-cd swoole
+``` bash
 phpize
 ./configure
 make 

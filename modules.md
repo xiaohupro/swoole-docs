@@ -6,7 +6,7 @@ Swoole server provide the API to write TCP/UDP/UnixSocket/HTTP/WebSocket servers
 
 ### [swoole\_http\_server](/modules/swoole-http-server.md)
 
-### [swoole\_websocket\_server](/modules/swoole-websocket-sreevr.md)
+### [swoole\_websocket\_server](/modules/swoole-websocket-server.md)
 
 ### [swoole\_redis\_server](/modules/swoole-redis-server.md)
 

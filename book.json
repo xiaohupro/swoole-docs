@@ -1,22 +1,14 @@
 {
-    "plugins": ["-highlight", "sunlight-highlighter", "page-footer"],
+    "plugins": ["-highlight", "prism", "prism-themes", "localized-footer"],
     "pluginsConfig": {
-        "page-footer": {
-            "description": "modified at",
-            "signature": "Baokun Dou",
-            "wisdom": "",
-            "format": "yyyy-MM-dd hh:mm:ss",
-            "copyright": "Copyright © 2017 BAOKUN DOU <doubaokun@gmail.com>, all rights reserved.",
-            "timeColor": "#666",
-            "copyrightColor": "#666",
-            "utcOffset": "0",
-            "isShowQRCode": false,
-            "baseUri": "https://doubaokun.gitbooks.io/swoole-docs/",
-            "isShowIssues": false,
-            "repo": "doubaokun/swoole-docs",
-            "issueNum": "0",
-            "token": "",
-            "style": "normal"
-        }
+      "localized-footer": {
+        "hline": true,            
+        "filename": "layouts/footer.md" 
+      },
+      "prism": {
+        "css": [
+          "prism-themes/themes/prism-xonokai.css"
+        ]
+      }
     }
 }
