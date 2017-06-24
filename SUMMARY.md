@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Get started](chapter1.md)
   * [Installation](chapter1/installation.md)
-* [Swoole Modules](modules.md)
+* [Swoole components](modules.md)
   * [Swoole server](modules/swoole-server.md)
   * [Swoole HTTP server](modules/swoole-http-server.md)
   * [Swoole WebSocket servr](modules/swoole-websocket-sreevr.md)
