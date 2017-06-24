@@ -32,5 +32,4 @@ Swoole PHP network framework enhances the efficiency of R&D team, enable them fo
 
 Swoole framework is open source and free. Released under the license of Apache 2.0.
 
-Copyright [BAOKUN DOU &lt;doubaokun@gmail.com&gt;](https://blog.eood.cn/) 2017.
 
