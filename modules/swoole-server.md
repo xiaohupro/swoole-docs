@@ -4,7 +4,7 @@ Swoole server component enable developers to write TCP, UDP, UnixSocket servers.
 
 ## Initialize the server
 
-$serv = new swoole\_server\("127.0.0.1", 9501, SWOOLE\_BASE, SWOOLE\_SOCK\_TCP\);
+`$serv = new swoole_server("127.0.0.1", 9501, SWOOLE_BASE, SWOOLE_SOCK_TCP);`
 
 ## Runtime paramaters
 
@@ -32,7 +32,7 @@ $serv = new swoole\_server\("127.0.0.1", 9501, SWOOLE\_BASE, SWOOLE\_SOCK\_TCP\)
 
 ## Internal variables
 
-`$serv->manager_pid; // PID of manager process, send SIGUSR1 to this process to reload the application `
+`$serv->manager_pid; // PID of manager process, send SIGUSR1 to this process to reload the application`
 
 `$serv->master_pid;  // PID of master process, send SIGTERM signal to this process to shutdown the server`
 
