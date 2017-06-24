@@ -11,7 +11,7 @@
   * [Swoole client](modules/swoole-clinet.md)
   * [Swoole Async I/O](modules/swoole-async-io.md)
   * [Swoole process](modules/swoole-process.md)
-  * Swoole memory
+  * [Swoole memory](modules/swoole-memory.md)
 * [Examples](examples.md)
   * [TCP server](examples/tcp-server.md)
   * [UDP server](examples/udp-server-example.md)
