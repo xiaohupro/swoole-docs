@@ -10,21 +10,20 @@ Write your first HTTP server with Swoole in PHP:
 
 1. Save the source code as file server.php
 
-`<?php`
+``` php
+$http = new swoole_http_server("127.0.0.1", 9501);
+$http->on('request', function ($request, $response) {
 
-`$http = new swoole_http_server("127.0.0.1", 9501);`
+    var_dump($request->get, $request->post);
 
-`$http->on('request', function ($request, $response) {`
+    $response->header("Content-Type", "text/html; charset=utf-8");
 
-`var_dump($request->get, $request->post);`
+    $response->end("<h1>Hello Swoole. #".rand(1000, 9999)."</h1>");
 
-`$response->header("Content-Type", "text/html; charset=utf-8");`
+});
 
-`$response->end("<h1>Hello Swoole. #".rand(1000, 9999)."</h1>");`
-
-`});`
-
-`$http->start();`
+$http->start();
+```
 
 1. Execute the command: php sever.php to run swoole HTTP server. \(Show developer friendly message\)
 
