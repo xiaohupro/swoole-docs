@@ -14,19 +14,67 @@
 
 ##### Debian and Ubuntu users
 
-> pecl install swoole
+`pecl install swoole`
 
 ##### Fedora and RedHat users
 
-> pecl install swoole
+`pecl install swoole`
 
 ##### MacOS X \(macOS\) users
 
 It is highly recommended to install Swoole on Mac OS X or macOS systems via homebrew:
 
-> brew install swoole
+`brew install swoole`
 
 ##### Building swoole from sources
+
+```
+cd swoole
+phpize
+./configure
+make 
+sudo make install
+```
+
+##### Configuration paramaters
+
+**--enable-swoole-debug**
+
+Enable the debug logs of swoole, do not enable this in production environment.
+
+**--enable-sockets**
+
+Enable sockets support, it depends on the PHP sockets extension. 
+
+**--enable-openssl**
+
+Enable openssl support
+
+**--with-openssl-dir**
+
+Change the default path of openssl library, for example:`--with-openssl-dir=/opt/openssl/.`
+
+**--enable-http2**
+
+Enable the support of HTTP2, it depends on nghttp2 library.
+
+**--enable-async-redis**
+
+Enable the suppor of async redis client, it depends on hiredis library.
+
+**--enable-timewheel**
+
+Enable the support of timewheel, optimize the heartbeat algorithm.
+
+**--enable-mysqlnd**
+
+Enable the support of mysqlnd, for example `swoole_mysql::escapse`
+
+**--enable-ringbuffer**
+
+Enable the support of ringbuffer memory pool
+
+> This is an experimental feature, do not use in production environment
 
 
 
