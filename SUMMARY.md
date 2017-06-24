@@ -10,7 +10,7 @@
   * [Swoole Redis server](modules/swoole-redis-server.md)
   * [Swoole client](modules/swoole-clinet.md)
   * [Swoole Async I/O](modules/swoole-async-io.md)
-  * Swoole process
+  * [Swoole process](modules/swoole-process.md)
   * Swoole memory
 * [Examples](examples.md)
   * [TCP server](examples/tcp-server.md)
