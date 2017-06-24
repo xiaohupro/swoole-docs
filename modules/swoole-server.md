@@ -30,6 +30,14 @@ $serv = new swoole\_server\("127.0.0.1", 9501, SWOOLE\_BASE, SWOOLE\_SOCK\_TCP\)
 
 `$serv->start();`
 
+## Internal variables
+
+`$serv->manager_pid; // PID of manager process, send SIGUSR1 to this process to reload the application `
+
+`$serv->master_pid;  // PID of master process, send SIGTERM signal to this process to shutdown the server`
+
+`$serv->connections; // The connections established`
+
 ## How it works
 
 
