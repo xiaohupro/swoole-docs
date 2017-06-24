@@ -1,3 +1,6 @@
 # Summary
 
-* [First Chapter](chapter1.md)
+* [Introduction](README.md)
+* [Get started](chapter1.md)
+* [Swoole Modules](modules.md)
+
