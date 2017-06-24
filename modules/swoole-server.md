@@ -1,4 +1,4 @@
-# Swoole server
+## Swoole server
 
 Swoole server component enable developers to write TCP, UDP, UnixSocket servers. It supports IPv4, IPv6, One Way and Two Way SSL and TLS Encryption**. **Developers do not have to know the internal implementations , only have to write business logic in the callback functions.
 
@@ -6,15 +6,15 @@ Swoole server component enable developers to write TCP, UDP, UnixSocket servers.
 
 $serv = new swoole\_server\("127.0.0.1", 9501, SWOOLE\_BASE, SWOOLE\_SOCK\_TCP\);
 
-## Runtime paramaters 
+## Runtime paramaters
 
 `$serv->set(array(`
 
-`    'worker_num' => 4,`
+`'worker_num' => 4,`
 
-`    'daemonize' => true,`
+`'daemonize' => true,`
 
-`    'backlog' => 128,`
+`'backlog' => 128,`
 
 `));`
 
@@ -30,7 +30,7 @@ $serv = new swoole\_server\("127.0.0.1", 9501, SWOOLE\_BASE, SWOOLE\_SOCK\_TCP\)
 
 `$serv->start();`
 
-# How it works
+## How it works
 
 
 
