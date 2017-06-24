@@ -5,7 +5,7 @@
   * [Installation](chapter1/installation.md)
 * [Swoole Modules](modules.md)
   * [Swoole server](modules/swoole-server.md)
-  * Swoole HTTP server
+  * [Swoole HTTP server](modules/swoole-http-server.md)
   * Swoole WebSocket sreevr
   * Swoole Redis server
   * [Swoole client](modules/swoole-clinet.md)
