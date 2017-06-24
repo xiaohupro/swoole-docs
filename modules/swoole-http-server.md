@@ -11,6 +11,6 @@ $http->on('request', function ($request, $response) {
 
 });
 
-$http->start();`
+$http->start();
 ```
 

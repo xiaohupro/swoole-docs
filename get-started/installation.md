@@ -43,39 +43,57 @@ sudo make install
 
 ##### Configuration paramaters
 
-**--enable-swoole-debug**
+``` bash
+--enable-swoole-debug
+```
 
 Enable the debug logs of swoole, do not enable this in production environment.
 
-**--enable-sockets**
+``` bash
+--enable-sockets
+```
 
 Enable sockets support, it depends on the PHP sockets extension. 
 
-**--enable-openssl**
+``` bash
+--enable-openssl
+``` 
 
 Enable openssl support
 
-**--with-openssl-dir**
+``` bash
+--with-openssl-dir
+```
 
 Change the default path of openssl library, for example:`--with-openssl-dir=/opt/openssl/.`
 
-**--enable-http2**
+``` bash
+--enable-http2
+```
 
 Enable the support of HTTP2, it depends on nghttp2 library.
 
-**--enable-async-redis**
+``` bash
+--enable-async-redis
+```
 
 Enable the suppor of async redis client, it depends on hiredis library.
 
-**--enable-timewheel**
+``` bash
+--enable-timewheel
+```
 
 Enable the support of timewheel, optimize the heartbeat algorithm.
 
-**--enable-mysqlnd**
+``` bash
+--enable-mysqlnd
+```
 
 Enable the support of mysqlnd, for example `swoole_mysql::escapse`
 
-**--enable-ringbuffer**
+``` bash
+--enable-ringbuffer
+```
 
 Enable the support of ringbuffer memory pool
 
