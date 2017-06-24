@@ -1,8 +1,8 @@
 # Summary
 
 * [Introduction](README.md)
-* [Get started](chapter1.md)
-  * [Installation](chapter1/installation.md)
+* [Get started](get-started.md)
+  * [Installation](get-started/installation.md)
 * [Swoole components](modules.md)
   * [Swoole server](modules/swoole-server.md)
   * [Swoole HTTP server](modules/swoole-http-server.md)
