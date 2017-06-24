@@ -9,7 +9,7 @@
   * [Swoole WebSocket sreevr](modules/swoole-websocket-sreevr.md)
   * [Swoole Redis server](modules/swoole-redis-server.md)
   * [Swoole client](modules/swoole-clinet.md)
-  * Swoole Async I/O
+  * [Swoole Async I/O](modules/swoole-async-io.md)
   * Swoole process
   * Swoole memory
 * [Examples](examples.md)
