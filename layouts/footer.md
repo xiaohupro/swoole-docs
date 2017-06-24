@@ -1,4 +1,4 @@
-*Copyright © 2017 [BAOKUN DOU](https://blog.eood.cn) doubaokun@gmail.com, all rights reserved.*
+*Copyright © 2017 [BAOKUN DOU](https://blog.eood.cn) & [Swoole Development Group](https://github.com/swoole/swoole-src), all rights reserved.*
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
