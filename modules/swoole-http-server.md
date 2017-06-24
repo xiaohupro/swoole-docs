@@ -39,9 +39,9 @@ Swoole HTTP server configuration:
 
 ``` bash
 // Enable SSL
-$serv = new swoole_http_server("127.0.0.1", 9501, SWOOLE_PROCESS, SWOOLE_SOCK_TCP | SWOOLE_SSL);
+$server = new swoole_http_server("127.0.0.1", 9501, SWOOLE_PROCESS, SWOOLE_SOCK_TCP | SWOOLE_SSL);
 // setup the location of ssl cert files and key files
-$serv->set([
+$server->set([
     'ssl_cert_file' => $ssl_dir . '/ssl.crt',
     'ssl_key_file' => $ssl_dir . '/ssl.key',
     'open_http2_protocol' => true, // Enable HTTP2 protocol
@@ -66,7 +66,7 @@ server {
 }
 ```
 
-
+### 
 
 
 
