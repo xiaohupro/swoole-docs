@@ -6,28 +6,26 @@ Swoole framework is released as a PHP extension \(PECL\) and run as a PHP CLI ap
 
 ## Hello world
 
-Write your first HTTP server with Swoole in PHP:
+An example of a web server written with Swoole which responds with 'Hello World':
 
-1. Save the hello world source code as file *server.php*
+``` php
 
-    ``` php
+$http = new swoole_http_server("127.0.0.1", 9501);
 
-    $http = new swoole_http_server("127.0.0.1", 9501);
+$http->on('request', function ($request, $response) {
+    $response->header("Content-Type", "text/plain");
+    $response->end("Hello World\n");
+});
 
-    $http->on('request', function ($request, $response) {
+$http->start();
+```
 
-        $response->header("Content-Type", "text/html; charset=utf-8");
+To run the server, put the code into a file called server.php and execute it with php cli:
 
-        $response->end("<h1>Hello World. #".rand(1000, 9999)."</h1>");
-
-    });
-
-    $http->start();
-    ```
-
-2. Execute the command: php sever.php to run swoole HTTP server. \(Show developer friendly message\)
-
-3. See the result in your browser: open [http://127.0.0.1:9501/](http://127.0.0.1:9501/)
+``` bash
+$ php server.php
+$ open http://127.0.0.1:9501/
+```
 
 #### 
 
