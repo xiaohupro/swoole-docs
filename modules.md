@@ -1,16 +1,22 @@
 # Swoole Modules
 
-## [swoole\_server](/modules/swoole-server.md) {#entry_h2_0}
+## [Swoole Server: swoole\_server](/modules/swoole-server.md) {#entry_h2_0}
 
-Swoole server provide the API to write TCP/UDP/UnixSocket/HTTP/WebSocket servers.
+Swoole server provides the API to write TCP / UDP / UnixSocket servers.
 
-### [swoole\_http\_server](/modules/swoole-http-server.md)
+### [Swoole HTTP Server: swoole\_http\_server](/modules/swoole-http-server.md)
 
-### [swoole\_websocket\_server](/modules/swoole-websocket-server.md)
+Swoole HTTP server provides the API to write HTTP servers.
 
-### [swoole\_redis\_server](/modules/swoole-redis-server.md)
+### [Swoole WebSocket Server: swoole\_websocket\_server](/modules/swoole-websocket-server.md)
 
-## [swoole\_client](/modules/swoole-client.md) {#entry_h2_1}
+Swoole WebSocket server provides the API to write WebSocket servers.
+
+### [Swoole Redis Server: swoole\_redis\_server](/modules/swoole-redis-server.md)
+
+Swoole Redis server provides the API to write TCP servers with Redis protocol.
+
+## [Swoole Client: swoole\_client](/modules/swoole-client.md) {#entry_h2_1}
 
 Swoole client provide the API to write TCP/UDP/UnixSocket/HTTP clients, supports IPv4/IPv6 protocol. Developers can write sync or async client side features with swoole client API.
 

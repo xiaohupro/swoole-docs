@@ -9,7 +9,7 @@ Swoole framework is released as a PHP extension \(PECL\) and run as a PHP CLI ap
 An example of a web server written with Swoole which responds with 'Hello World':
 
 ``` php
-
+<?php
 $http = new swoole_http_server("127.0.0.1", 9501);
 
 $http->on('start', function ($server) {
