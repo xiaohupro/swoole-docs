@@ -12,6 +12,8 @@
   * [Swoole Async I/O](modules/swoole-async-io.md)
   * [Swoole process](modules/swoole-process.md)
   * [Swoole memory](modules/swoole-memory.md)
+    * [Swoole atomic](modules/swoole-atomic.md)
+    * [Swoole buffer](modules/swoole-buffer.md)
 * [Examples](examples.md)
   * [TCP server](examples/tcp-server.md)
   * [UDP server](examples/udp-server-example.md)

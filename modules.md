@@ -40,11 +40,15 @@ Async API includes the async File IO API, Timer, async HTTP client API, async My
 
 Linux process management module can be used to create new Linux process, manage the processes, and the communication between different processes.
 
-## swoole\_buffer {#entry_h2_5}
+## [swoole\_atomic](/modules/swoole-atomic.md) {#entry_h2_5}
+
+Integer variable allows any processor to atomically test and modify. Implemented based on CPU atomic instructions.
+
+## [swoole\_buffer](/modules/swoole-buffer.md) {#entry_h2_6}
 
 Memory management module enable developers managing memory like C language without worrying about memory allocation, release.
 
-## swoole\_table {#entry_h2_6}
+## swoole\_table {#entry_h2_7}
 
 Based on shared memory and spin lock, swoole table is a high performance memory management module.
 
