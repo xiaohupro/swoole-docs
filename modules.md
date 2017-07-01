@@ -36,7 +36,7 @@ Async API includes the async File IO API, Timer, async HTTP client API, async My
 
 **swoole\_async\_write**
 
-## [Swoole Process](/modules/swoole-process.md) {#entry_h2_4}
+## [Swoole Process Manager](/modules/swoole-process.md) {#entry_h2_4}
 
 Linux process management module can be used to create new Linux process, manage the processes, and the communication between different processes.
 

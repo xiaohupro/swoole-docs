@@ -1,4 +1,4 @@
-# Swoole client
+# Swoole TCP/UDP client
 
 Swoole client provide the wrapper of TCP/UDP sockets client side API. 
 
