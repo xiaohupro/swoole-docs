@@ -220,5 +220,103 @@ echo $port->port;
 
 #### bool swoole_server->addProcess(swoole_process $process);
 
+Add a user defined child process to the server. The process can be used as monitoring or other tasks.
+
+Example:
+
+``` php
+<?php
+$server = new swoole_server('127.0.0.1', 9501);
+
+$process = new swoole_process(function($process) use ($server) {
+    while (true) {
+        $msg = $process->read();
+        foreach($server->connections as $conn) {
+            $server->send($conn, $msg);
+        }
+    }
+});
+
+$server->addProcess($process);
+
+$server->on('receive', function ($serv, $fd, $from_id, $data) use ($process) {
+    // send the data received to all the child processes
+    $process->write($data);
+});
+
+$server->start();
+```
+
+#### bool swoole_server->listen(string $host, int $port, int $type);
+
+Alias of bool swoole_server->addlistener(string $host, int $port, int $type);
+
+#### bool swoole_server->start()
+
+Start the swoole server, it will create worker_num + 2 processes by default:
+
+* main process: running multiple threads reactor, receive new connections and assign connections to worker processes
+* manager process: managing the worker processes
+* worker_num * child processes: process the data and business logics
+
+#### bool swoole_server->reload(bool $only_reload_taskworkrer = false)
+
+Restart all the worker processes.
+
+#### function swoole_server->stop();
+
+#### void swoole_server->shutdown();
+
+#### $server->tick(1000, function() use ($server, $fd))
+
+#### swoole_server->after(int $after_time_ms, mixed $callback_function);
+
+#### function swoole_server->defer(callable $callback);
+
+#### $server->clearTimer($id);
+
+#### bool swoole_server->close(int $fd, bool $reset = false);
+
+#### bool swoole_server->send(int $fd, string $data, int $reactorThreadId = 0);
+
+#### bool swoole_server->sendfile(int $fd, string $filename, int $offset =0, int $length = 0);
+
+#### bool swoole_server->sendto(string $ip, int $port, string $data, int $server_socket = -1);
+
+#### bool swoole_server->sendwait(int $fd, string $send_data);
+
+#### bool swoole_server->sendMessage(string $message, int $dst_worker_id);
+
+#### function swoole_server->exist(int $fd)
+
+#### function swoole_server->pause(int $fd);
+
+#### function swoole_server->resume(int $fd);
+
+#### function swoole_server->connection_info(int $fd, int $from_id, bool $ignore_close = false)
+
+#### swoole_server::connection_list(int $start_fd = 0, int $pagesize = 10);
+
+#### bool swoole_server::bind(int $fd, int $uid)
+
+#### array swoole_server->stats();
+
+#### int swoole_server::task(mixed $data, int $dst_worker_id = -1) 
+
+#### string $result = swoole_server->taskwait(mixed $task_data, float $timeout = 0.5, int $dst_worker_id = -1);
+
+#### array swoole_server->taskWaitMulti(array $tasks, double $timeout);
+
+#### $swoole_server->finish("response");
+
+#### array swoole_server::heartbeat(bool $if_close_connection = true);
+
+#### function swoole_server->getLastError()
+
+#### $socket = $server->getSocket();
+
+
+
+
 
 
