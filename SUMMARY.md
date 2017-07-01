@@ -10,7 +10,7 @@
   * [Swoole Redis Server](modules/swoole-redis-server.md)
   * [Swoole TCP/UDP Client](modules/swoole-client.md)
   * [Swoole Async I/O](modules/swoole-async-io.md)
-  * [Swoole Process](modules/swoole-process.md)
+  * [Swoole Process Manager](modules/swoole-process.md)
   * [Swoole Memory](modules/swoole-memory.md)
     * [Swoole Atomic](modules/swoole-atomic.md)
     * [Swoole Buffer](modules/swoole-buffer.md)

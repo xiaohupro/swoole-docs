@@ -1,4 +1,4 @@
-# Swoole mmap
+# Swoole Mmap
 
 Swoole provides the api to use mmap for files access. This is useful when multiple threads or processes accessing data in a read only fashion from the same file.
 
