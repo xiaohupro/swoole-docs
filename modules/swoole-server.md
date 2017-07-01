@@ -35,7 +35,7 @@ $server->on('Close', 'my_onClose');
 $server->start();
 ```
 
-### Internal variables
+### Attributes
 
 ``` php
 <?php
@@ -51,4 +51,6 @@ $server->connections; // The connections established
 ### Example
 
 ### Methods
+
+#### 
 
