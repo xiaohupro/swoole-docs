@@ -12,9 +12,9 @@
   * [Swoole Async I/O](modules/swoole-async-io.md)
   * [Swoole process](modules/swoole-process.md)
   * [Swoole memory](modules/swoole-memory.md)
-    * [Swoole atomic](modules/swoole-atomic.md)
-    * [Swoole buffer](modules/swoole-buffer.md)
-    * [Swoole table](modules/swoole-table.md)
+    * [Swoole Atomic](modules/swoole-atomic.md)
+    * [Swoole Buffer](modules/swoole-buffer.md)
+    * [Swoole Table](modules/swoole-table.md)
     * [Swoole MMap](modules/swoole-mmap.md)
     * [Swoole Channel](modules/swoole-channel.md)
 <!-- 
