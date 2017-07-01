@@ -2,9 +2,11 @@
 
 Swoole framework is released as a PHP extension \(PECL\) and run as a PHP CLI application.
 
-## [Installation](/get-started/installation.md)
+### Installation
 
-## Hello world
+Please check the [Swoole installation guide](/get-started/installation.md).
+
+### Hello world
 
 An example of a web server written with Swoole which responds with 'Hello World':
 

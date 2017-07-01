@@ -17,6 +17,7 @@
     * [Swoole table](modules/swoole-table.md)
     * [Swoole MMap](modules/swoole-mmap.md)
     * [Swoole Channel](modules/swoole-channel.md)
+<!-- 
 * [Examples](examples.md)
   * [TCP server](examples/tcp-server.md)
   * [UDP server](examples/udp-server-example.md)
@@ -26,6 +27,7 @@
   * Async HTTP client
   * Async Tasks
   * Timer
+-->
 * [Production environment](production-environment.md)
 * Advanced features
 

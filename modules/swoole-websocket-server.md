@@ -2,6 +2,8 @@
 
 The following PHP codes shows how to write a simple WebSocket server. The WebSocket server sends the client a message when the WebSocket connection is established.
 
+### Example
+
 ``` php
 <?php
 $server = new swoole_websocket_server("127.0.0.1", 9501);
@@ -33,7 +35,7 @@ function onHandShake(swoole_http_request $request, swoole_http_response $respons
 
 > When the custom on handshake function is implemented, the *onOpen* callback function will not be called.
 
-Sample onHandShake function:
+### Sample onHandShake function
 
 ``` php
 <?php

@@ -3,6 +3,7 @@
 With 5 lines of code, you can write an Async non-blocking IO, multiple process HTTP server.
 
 ``` php
+<?php 
 $http = new swoole_http_server("127.0.0.1", 9501);
 
 $http->on('request', function ($request, $response) {

@@ -7,7 +7,7 @@ Swoole process manager can be used to replace PHP *pcntl* extension. Compare wit
 * The child process can use swoole_event callbacks.
 * Exec API enable the child process execute Linux applications and communicate with parent process
 
-Sync Swoole process manager example:
+### Example
 
 ``` php
 <?php

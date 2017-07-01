@@ -2,13 +2,13 @@
 
 Swoole server component enable developers to write TCP, UDP, UnixSocket servers. It supports IPv4, IPv6, One Way and Two Way SSL and TLS Encryption**. **Developers do not have to know the internal implementations , only have to write business logic in the callback functions.
 
-## Initialize the server
+### Initialize the server
 
 ``` php
 $server = new swoole_server("127.0.0.1", 9501, SWOOLE_BASE, SWOOLE_SOCK_TCP);
 ```
 
-## Runtime paramaters
+### Runtime paramaters
 
 ``` php
 <?php
@@ -19,7 +19,7 @@ $server->set(array(
 ));
 ```
 
-## Callback functions
+### Callback functions
 
 ``` php
 <?php
@@ -28,14 +28,14 @@ $server->on('Receive', 'my_onReceive');
 $server->on('Close', 'my_onClose');
 ```
 
-## Start the server
+### Start the server
 
 ``` php
 <?php
 $server->start();
 ```
 
-## Internal variables
+### Internal variables
 
 ``` php
 <?php
@@ -44,7 +44,7 @@ $server->master_pid;  // PID of master process, send SIGTERM signal to this proc
 $server->connections; // The connections established
 ```
 
-## How it works
+### How it works
 
 
 

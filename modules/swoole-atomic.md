@@ -4,6 +4,8 @@ Integer variable allows any processor to atomically test and modify. Implemented
 
 > The Swoole atomic variables have to defined before *swoole_server->start*.
 
+### Example
+
 ``` php
 <?php
 $atomic = new swoole_atomic(123);

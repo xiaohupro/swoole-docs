@@ -2,6 +2,8 @@
 
 Swoole Redis server implements the Redis server side protocols based on Swoole TCP server API. 
 
+### Example
+
 ``` php
 <?php
 use Swoole\Redis\Server;
