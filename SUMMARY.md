@@ -8,7 +8,7 @@
   * [Swoole HTTP Server](modules/swoole-http-server.md)
   * [Swoole WebSocket Server](modules/swoole-websocket-server.md)
   * [Swoole Redis Server](modules/swoole-redis-server.md)
-  * [Swoole Client](modules/swoole-client.md)
+  * [Swoole TCP/UDP Client](modules/swoole-client.md)
   * [Swoole Async I/O](modules/swoole-async-io.md)
   * [Swoole Process](modules/swoole-process.md)
   * [Swoole Memory](modules/swoole-memory.md)
