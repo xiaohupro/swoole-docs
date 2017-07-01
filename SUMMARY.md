@@ -17,6 +17,7 @@
     * [Swoole Table](modules/swoole-table.md)
     * [Swoole MMap](modules/swoole-mmap.md)
     * [Swoole Channel](modules/swoole-channel.md)
+    * [Swoole Lock](modules/swoole-lock.md)
 * [Production Environment](production-environment.md)
 * Advanced features
 

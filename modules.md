@@ -62,4 +62,8 @@ Swoole provides the api to use mmap for files access.
 
 Memory data structure likes Chan in Golang, implemented based on shared memory and Mutex locks. It can be used as high performance message queue in memory. 
 
+### [Swoole Lock](/modules/swoole-lock.md) {#entry_h2_10}
+
+Swoole locks enable PHP developers use locks for data synchronization between multiple theads or processes.
+
 
