@@ -84,3 +84,6 @@ Swoole process manager can be used to replace PHP *pcntl* extension. Compare wit
     }
 });
 ```
+
+### Methods
+

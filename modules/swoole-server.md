@@ -48,3 +48,7 @@ $server->connections; // The connections established
 
 
 
+### Example
+
+### Methods
+

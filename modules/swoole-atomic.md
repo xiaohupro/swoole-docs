@@ -1,4 +1,4 @@
-# Swoole atomic
+# Swoole Atomic
 
 Integer variable allows any processor to atomically test and modify. Implemented based on CPU atomic instructions. 
 
@@ -15,3 +15,5 @@ echo $atomic->cmpset(122, 999)."\n";
 echo $atomic->cmpset(124, 999)."\n";
 echo $atomic->get()."\n";
 ```
+
+### Methods
