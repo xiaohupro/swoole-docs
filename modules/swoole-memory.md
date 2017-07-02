@@ -4,7 +4,9 @@ Swoole provides 6 different memory operation APIs: Lock, Buffer, Table, Atomic, 
 
 All these API are async and non-blocking, multiple-process safe. Don't have to warry about the data sync issues. 
 
-### Lock
+### [Swoole Lock](/modules/swoole-lock.md) {#entry_h2_1}
+
+Swoole locks enable PHP developers use locks for data synchronization between multiple theads or processes.
 
 ### [Swoole Atomic](/modules/swoole-atomic.md) {#entry_h2_5}
 

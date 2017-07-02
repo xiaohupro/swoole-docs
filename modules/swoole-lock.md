@@ -1,4 +1,4 @@
-# Swoole lock
+# Swoole Lock
 
 Swoole locks enable PHP developers use locks for data synchronization between multiple theads or processes.
 
