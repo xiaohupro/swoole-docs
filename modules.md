@@ -40,7 +40,7 @@ Async API includes the async File IO API, Timer, async HTTP client API, async My
 
 Developers can use swoole EventLoop API to use the system EventLoop.
 
-## Swoole memory
+## Swoole Memory Management
 
 ### [Swoole Atomic](/modules/swoole-atomic.md) {#entry_h2_9}
 
