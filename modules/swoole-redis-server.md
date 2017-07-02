@@ -112,5 +112,3 @@ $server->on('WorkerStart', function ($server) {
 $server->start();
 ```
 
-### Methods
-

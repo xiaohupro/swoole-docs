@@ -68,4 +68,8 @@ $server->on('handshake',function(\swoole_http_request $request,$swoole_http_resp
 });
 ```
 
-### Methods
+### Callback functions
+
+* onOpen
+* onMessage
+* onHandShake
