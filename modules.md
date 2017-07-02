@@ -30,11 +30,19 @@ Async API includes the async File IO API, Timer, async HTTP client API, async My
 
 ## [Swoole MySQL Client](/modules/swoole-async-mysql-client.md) {#entry_h2_4}
 
+The swoole async MySQL client is a replacement of the other sync MySQL clients: libmysqlclient, mysqlnd, mysqli.
+
 ## [Swoole Redis Client](/modules/swoole-async-redis-client.md) {#entry_h2_5}
+
+Swoole async redis client is based on *hiredis*.
 
 ## [Swoole Async Http/WebSocket Client](/modules/swoole-async-http-client.md) {#entry_h2_6}
 
+Swoole Async HTTP client is a high performance and aync HTTP client supports Http-Chun, Keep-Alive, form-data.
+
 ## [Swoole Async Http2 Client](/modules/swoole-async-http2-client.md) {#entry_h2_7}
+
+Http2.0 client support stream and multiplexing. Multiple GET or POST request can be sent over the same TCP connection.
 
 ## [Swoole EventLoop](/modules/swoole-event-loop.md) {#entry_h2_8}
 
