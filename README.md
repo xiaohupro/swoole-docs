@@ -1,6 +1,6 @@
 # Swoole Docs
 
-Swoole is an high-performance network communication framework uses an event-driven, asynchronous, non-blocking I/O model makes it scalable and efficient. It is written in C language without 3rd party libraries.
+Swoole is an high-performance network framework uses an event-driven, asynchronous, non-blocking I/O model makes it scalable and efficient. It is written in C language without 3rd party libraries.
 
 It enables PHP developers to write high-performance, scalable, concurrent TCP, UDP, Unix Socket, HTTP, WebSocket services with PHP programming language without too much knowledge about non-blocking I/O programming and low-level Linux kernel.
 
@@ -8,9 +8,15 @@ Compare with other Async programming framework or software such as Nginx, Tornad
 
 Swoole PHP network framework enhances the efficiency of R&D team, enable them to focus on the development of innovative products.
 
-**Features:**
+Swoole follows the same principle as [Node.js](https://nodejs.org/en/) and [Netty](https://netty.io/), but for PHP.
 
-* Event based, asynchronous programming for PHP
+### Features
+
+* Rapid development of high performance protocol servers & clients with PHP language
+* Event-driven, asynchronous programming for PHP
+* Event loop API
+* Processes management API
+* Memory management API
 * Async TCP/UDP/HTTP/WebSocket/HTTP2 client/server side API
 * Async TCP/UDP client side API
 * Async MySQL client side API and connection pool
@@ -21,7 +27,7 @@ Swoole PHP network framework enhances the efficiency of R&D team, enable them to
 * Milliseconds scheduler
 * Async File I/O API
 
-**Use cases:**
+### Use cases
 
 * Web applications and systems
 * Mobile communication systems
@@ -36,7 +42,7 @@ Swoole framework is open source and free. Released under the license of Apache 2
 
 #### [Installation](/get-started/installation.md) {#entry_h2_0}
 
-### Swoole Modules
+### [Swoole Modules](/modules.md)
 
 #### [Swoole Server](/modules/swoole-server.md) {#entry_h2_0}
 
@@ -86,7 +92,7 @@ Http2.0 client support stream and multiplexing. Multiple GET or POST request can
 
 Developers can use Swoole EventLoop API to use the system EventLoop.
 
-#### Swoole Memory Management
+#### [Swoole Memory Management](/modules/swoole-memory.md)
 
 #### [Swoole Atomic](/modules/swoole-atomic.md) {#entry_h2_9}
 
