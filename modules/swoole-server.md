@@ -5,6 +5,7 @@ Swoole server component enable developers to write TCP, UDP, UnixSocket servers.
 ### Initialize the server
 
 ``` php
+<?php
 $server = new swoole_server("127.0.0.1", 9501, SWOOLE_BASE, SWOOLE_SOCK_TCP);
 ```
 
@@ -42,6 +43,36 @@ $server->start();
 $server->manager_pid; // PID of manager process, send SIGUSR1 to this process to reload the application
 $server->master_pid;  // PID of master process, send SIGTERM signal to this process to shutdown the server
 $server->connections; // The connections established
+```
+
+### Events
+
+* Start
+* Shutdown
+* ManagerStart
+* ManagerStop
+* WorkerStart
+* WorkerStop
+* Connect
+* Receive
+* Packet
+* Close
+* BufferEmpty
+* BufferFull
+* Task
+* Timer
+* Finish
+* PipeMessage
+* WorkerError
+
+Example of writing callback functions, or register event callbacks:
+
+``` php
+<?php
+$server = new swoole_server("127.0.0.1", 9501, SWOOLE_BASE, SWOOLE_SOCK_TCP);
+$server->on('WorkerStart', function($serv, $workerId) {
+    var_dump(get_included_files());
+});
 ```
 
 ### How it works
@@ -186,14 +217,14 @@ Register callback function for the events:
 <?php
 $server = new swoole_server("127.0.0.1", 9501);
 $server->on('connect', function ($server, $fd){
-    echo "Client:Connect.\n";
+    echo "New connection established: #{$fd}.\n";
 });
 $server->on('receive', function ($server, $fd, $from_id, $data) {
-    $server->send($fd, 'Swoole: '.$data);
+    $server->send($fd, "Echo to #{$fd}: \n".$data);
     $server->close($fd);
 });
 $server->on('close', function ($server, $fd) {
-    echo "Client: Close.\n";
+    echo "Connection closed: #{$fd}.\n";
 });
 $server->start();
 ```
@@ -619,12 +650,12 @@ $ret = socket_set_option(
     $socket,
     IPPROTO_IP,
     MCAST_JOIN_GROUP,
-    array('group' => '224.10.20.30', 'interface' => 'eth0')
+    array('group' => '10.0.0.5', 'interface' => 'eth0')
 );
 
 if ($ret === false)
 {
-    throw new RuntimeException('Unable to join multicast group');
+    throw new RuntimeException('Unable to join the multicast group');
 }
 
 $server->on('Packet', function (swoole_server $serv, $data, $addr)
@@ -635,23 +666,3 @@ $server->on('Packet', function (swoole_server $serv, $data, $addr)
 
 $server->start();
 ```
-
-### Callback functions
-
-onStart
-onShutdown
-onManagerStart
-onManagerStop
-onWorkerStart
-onWorkerStop
-onConnect
-onReceive
-onPacket
-onClose
-onBufferEmpty
-onBufferFull
-onTask
-onTimer
-onFinish
-onPipeMessage
-onWorkerError

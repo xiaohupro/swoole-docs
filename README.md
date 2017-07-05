@@ -10,6 +10,8 @@ Swoole PHP network framework enhances the efficiency of R&D team, enable them to
 
 Swoole follows the same principle as [Node.js](https://nodejs.org/en/) and [Netty](https://netty.io/), but for PHP.
 
+The Swoole framework is released as a [PHP extension (PECL)](https://pecl.php.net/package/swoole) and runs as a PHP CLI application.
+
 ### Features
 
 * Rapid development of high performance protocol servers & clients with PHP language
@@ -26,6 +28,9 @@ Swoole follows the same principle as [Node.js](https://nodejs.org/en/) and [Nett
 * Async Task API
 * Milliseconds scheduler
 * Async File I/O API
+* [Golang style channels](https://en.wikipedia.org/wiki/Channel_\(programming\)) for inter-processes communication
+* System locks API: Filelock, Readwrite lock, semaphore, Mutex, spinlock
+* IPv4/IPv6/UnixSocket/TCP/UDP and SSL/TLS support
 
 ### Use cases
 

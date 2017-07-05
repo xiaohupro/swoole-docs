@@ -2,6 +2,13 @@
 
 The following PHP codes shows how to write a simple WebSocket server. The WebSocket server sends the client a message when the WebSocket connection is established.
 
+### Events
+
+* Open
+* Handshake
+* Message
+* Close
+
 ### Example
 
 ``` php

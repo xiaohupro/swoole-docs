@@ -22,6 +22,10 @@ make -j
 sudo make install
 ```
 
+### Events
+
+* Message
+
 ### Methods:
 
 #### function swoole_redis->connect(string $host, int $port, callable $callback);

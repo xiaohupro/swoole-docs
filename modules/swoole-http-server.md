@@ -2,6 +2,10 @@
 
 With 5 lines of code, you can write an Async non-blocking IO, multiple process HTTP server.
 
+### Events
+
+* Request
+
 ### Example
 
 ``` php

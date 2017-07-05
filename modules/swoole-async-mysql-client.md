@@ -38,6 +38,10 @@ $db->connect($server, function ($db, $r) {
 });
 ```
 
+### Events
+
+* Connect
+
 ### Methods:
 
 #### swoole_mysql->construct()

@@ -34,6 +34,8 @@ $client->post("/", $array, function ($o) use($client) {
 Swoole\Event::wait();
 ```
 
+### Events
+
 ### Methods
 
 #### function swoole_http2_client->__construct($host, $port, $ssl = false)

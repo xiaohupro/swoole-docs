@@ -2,6 +2,8 @@
 
 Swoole Async HTTP client is a high performance and aync HTTP client supports Http-Chun, Keep-Alive, form-data.
 
+### Events
+
 ### Methods
 
 #### swoole_http_client->__construct(string $host, int port, bool $ssl = false);
