@@ -16,6 +16,7 @@
   * [Swoole Async Redis client](modules/swoole-async-redis-client.md)
   * [Swoole EventLoop](modules/swoole-event-loop.md)
   * [Swoole Scheduler](modules/swoole-scheduler.md)
+  * [Swoole Serialize](modules/swoole-serialize.md)
   * [Swoole Process Manager](modules/swoole-process.md)
   * [Swoole Memory](modules/swoole-memory.md)
     * [Swoole Atomic](modules/swoole-atomic.md)

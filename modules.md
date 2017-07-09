@@ -52,6 +52,10 @@ Developers can use swoole EventLoop API to use the system EventLoop.
 
 Schedule functions to run at set intervals, accurate to milliseconds.
 
+## [Swoole Serialize](/modules/swoole-serialize.md) {#entry_h2_8}
+
+Schedule functions to run at set intervals, accurate to milliseconds.
+
 ## Swoole Memory Management
 
 ### [Swoole Atomic](/modules/swoole-atomic.md) {#entry_h2_9}
@@ -66,7 +70,7 @@ Memory management module enable developers managing memory like C language witho
 
 Swoole table is a high performance memory management module, implemented based on shared memory and spin lock.
 
-### [Swoole Mmap](/modules/swoole-mmap.md) {#entry_h2_12}
+### [Swoole MMap](/modules/swoole-mmap.md) {#entry_h2_12}
 
 Swoole provides the api to use mmap for files access.
 
