@@ -48,6 +48,10 @@ Http2.0 client support stream and multiplexing. Multiple GET or POST request can
 
 Developers can use swoole EventLoop API to use the system EventLoop.
 
+## [Swoole Scheduler](/modules/swoole-scheduler.md) {#entry_h2_8}
+
+Schedule functions to run at set intervals, accurate to milliseconds.
+
 ## Swoole Memory Management
 
 ### [Swoole Atomic](/modules/swoole-atomic.md) {#entry_h2_9}
