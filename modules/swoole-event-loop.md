@@ -32,7 +32,7 @@ Update the event callback functions of a socket.
 
 Remove all event callback functions of a socket.
 
-#### void swoole_event_exit(void)
+#### void swoole_event_exit()
 
 Exit the eventloop, only available at client side.
 
@@ -58,7 +58,7 @@ swoole_event_write($fp, $data);
 
 #### swoole_event_defer(mixed $callback_function);
 
-Add callback function to the next eventloop.
+Add callback function to the next event loop.
 
 Example:
 

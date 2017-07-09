@@ -17,3 +17,15 @@ echo $atomic->get()."\n";
 ```
 
 ### Methods
+
+#### swoole_atomic->__construct();
+
+#### swoole_atomic->add($add_value);
+
+#### swoole_atomic->sub($sub_value);
+
+#### swoole_atomic->get();
+
+#### swoole_atomic->set($value);
+
+#### swoole_atomic->cmpset($value);

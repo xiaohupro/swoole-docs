@@ -73,8 +73,35 @@ server {
 }
 ```
 
-### 
+### Methods
 
+#### swoole_http_server->on(string $event, $callback);
 
+Events:
 
+* request HTTP request
+* handshake HTTP2 handshake
 
+#### swoole_http_server->start();
+
+#### swoole_http_request->rawcontent();
+
+#### swoole_http_response->write($data);
+
+#### swoole_http_response->end($data);
+
+#### swoole_http_response->sendfile($file_location, $offset, $length);
+
+#### swoole_http_response->cookie($name, $value, $expires, $path, $domain, $secure, $httponly);
+
+#### swoole_http_response->rawcookie($name, $value, $expires, $path, $domain, $secure, $httponly);
+
+#### swoole_http_response->header($key, $value, $ucwords = 1);
+
+#### swoole_http_response->initHeader();
+
+#### swoole_http_response->gzip($level = 1);
+
+#### swoole_http_response->status($status = 200);
+
+HTTP status code: [http://pages.cs.wisc.edu/~cao/http1.1-rfc2068.html](http://pages.cs.wisc.edu/~cao/http1.1-rfc2068.html)

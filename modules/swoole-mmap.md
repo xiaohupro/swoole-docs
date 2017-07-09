@@ -1,4 +1,4 @@
-# Swoole Mmap
+# Swoole MMap
 
 Swoole provides the api to use mmap for files access. This is useful when multiple threads or processes accessing data in a read only fashion from the same file.
 
@@ -23,7 +23,7 @@ fclose($fp);
 
 ### Methods
 
-#### function swoole_mmap::open($file, $size = -1, $offset = 0);
+#### function swoole_mmap->open($file, $size = -1, $offset = 0);
 
 Map a file into memory and return a *stream* resource which can be used by PHP stream operations.
 

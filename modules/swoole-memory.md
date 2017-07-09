@@ -20,7 +20,7 @@ Memory management module enable developers managing memory like C language witho
 
 Swoole table is a high performance memory management module, implemented based on shared memory and spin lock.
 
-### [Swoole Mmap](/modules/swoole-mmap.md) {#entry_h2_8}
+### [Swoole MMap](/modules/swoole-mmap.md) {#entry_h2_8}
 
 Swoole provides the api to use mmap for files access.
 

@@ -52,14 +52,14 @@ else
 
 ### Methods
 
-#### function Channel->__construct(int $size);
+#### swoole_channel->__construct(int $size);
 
 Construct a swoole channel with fixed size.
 
 * The minimum size of a swoole channel is 64KB.
 * Exceptions will be thrown if there is not enough memory.
 
-#### function Channel->push(mixed $data);
+#### swoole_channel->push(mixed $data);
 
 Write and push data into swoole channel.
 
@@ -67,13 +67,13 @@ Write and push data into swoole channel.
 * If size of the data is more than 8KB, swoole channel will use temp files storage.
 * The function will return true if the write operation is succeeded, or return false if there is not enough space.
 
-#### function Channel->pop();
+#### swoole_channel->pop();
 
 Read and pop data from swoole channel.
 
 * If the channel is empty, the function will return false, or return the unserialized data.
 
-#### function Channel->stats() : array;
+#### swoole_channel->stats();
 
 Get stats of swoole channel: the numbers of queued elements and total size of the memory used by the queue:
 

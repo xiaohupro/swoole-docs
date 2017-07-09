@@ -76,7 +76,7 @@ Create persistent TCP connection in php-fpm or apache php:
 $cli = new swoole_client(SWOOLE_TCP | SWOOLE_KEEP);
 ```
 
-#### function swoole_client->set(array $settings);
+#### swoole_client->set(array $settings);
 
 Set the Swoole client parameters before the connection is established.
 
@@ -202,7 +202,7 @@ if (!socket_set_option($socket, SOL_SOCKET, SO_REUSEADDR, 1)) {
 }
 ```
 
-#### array swoole_client->getsockname();
+#### swoole_client->getsockname();
 
 Get the local socket name of the connection.
 
@@ -210,15 +210,15 @@ Get the local socket name of the connection.
 
 Get the remote socket name of the connection.
 
-#### function swoole_client->getPeerCert()
+#### swoole_client->getPeerCert()
 
 Get the Cert of the remote server.
 
-#### function swoole_client->sleep()
+#### swoole_client->sleep()
 
 Remove the TCP client from system event loop.
 
-#### function swoole_client->wakeup()
+#### swoole_client->wakeup()
 
 Add the TCP client into the system event loop.
 
@@ -234,9 +234,11 @@ $client->on("receive", function(swoole_client $cli, $data){
 });
 ```
 
-#### $client->enableSSL()
+#### swoole_client->enableSSL()
 
 Enable the SSL for the TCP client.
+
+#### swoole_client->pipe($socket);
 
 Examples:
 

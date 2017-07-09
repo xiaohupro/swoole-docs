@@ -28,7 +28,7 @@ sudo make install
 
 ### Methods:
 
-#### function swoole_redis->connect(string $host, int $port, callable $callback);
+#### swoole_redis->connect(string $host, int $port, callable $callback);
 
 Connect to the Redis server.
 

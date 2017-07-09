@@ -27,7 +27,7 @@ Swoole\Async::dnsLookup("www.google.com", function ($domainName, $ip) {
 });
 ```
 
-#### swoole_http_client->set()
+#### swoole_http_client->set(array $setting);
 
 Set the parameters for the http client.
 
@@ -43,7 +43,7 @@ $http->set(['keep_alive' => false]);
 $http->set(['websocket_mask' => true]);
 ```
 
-#### function swoole_http_client->setMethod(string $method);
+#### swoole_http_client->setMethod(string $method);
 
 Set the http request method.
 
@@ -54,19 +54,19 @@ Example:
 $client->setMethod("PUT");
 ```
 
-#### function swoole_http_client->setHeaders(array $headers);
+#### swoole_http_client->setHeaders(array $headers);
 
 Set the http request headers.
 
-#### function swoole_http_client->setCookies(array $cookies);
+#### swoole_http_client->setCookies(array $cookies);
 
 Set the http request cookies.
 
-#### function swoole_http_client->setData(string $data);
+#### swoole_http_client->setData(string $data);
 
 Set the http request body data. The http method will be changed to be *POST*.
 
-#### function swoole_http_client->addFile(string $path, string $name, string $filename = null, string $mimeType = null, int $offset = 0, int $length)
+#### swoole_http_client->addFile(string $path, string $name, string $filename = null, string $mimeType = null, int $offset = 0, int $length)
 
 Add files to the post form.
 
@@ -86,7 +86,18 @@ $cli->post('/dump2.php', array("xxx" => 'abc', 'x2' => 'rango'), function ($cli)
 });
 ```
 
-#### function swoole_http_client->get(string $path, callable $callback);
+#### swoole_http_client->on(string $event, $callback);
+
+Register callback function by event name.
+
+Events:
+
+* connect
+* message
+* close
+* error
+
+#### swoole_http_client->get(string $path, callable $callback);
 
 Send *GET* http request to the remote server.
 
@@ -110,7 +121,7 @@ $cli->get('/index.php', function ($cli) {
 });
 ```
 
-#### function swoole_http_client->post(string $path, mixed $data, callable $callback);
+#### swoole_http_client->post(string $path, mixed $data, callable $callback);
 
 Send *POST* http request to the remote server.
 
@@ -126,7 +137,7 @@ $cli->post('/post.php', array("a" => '1234', 'b' => '456'), function ($cli) {
 });
 ```
 
-#### function swoole_http_client->upgrade(string $path, callable $callback);
+#### swoole_http_client->upgrade(string $path, callable $callback);
 
 Upgrade to websocket protocol.
 
@@ -146,11 +157,11 @@ $cli->upgrade('/', function ($cli) {
 function onMessage(swoole_http_client $client, swoole_websocket_frame $frame);
 ```
 
-#### function swoole_http_client->execute(string $path, callable $callback);
+#### swoole_http_client->execute(string $path, callable $callback);
 
 Send the http request after setup the parameters.
 
-#### function swoole_http_client->download(string $path, string $filename, callable $callback, int $offset = 0);
+#### swoole_http_client->download(string $path, string $filename, callable $callback, int $offset = 0);
 
 Download file from the remote server.
 
@@ -189,12 +200,15 @@ $cli->download('/video.avi', $file, function ($cli) {
 }, $offset);
 ```
 
-#### function swoole_http_client->close() : bool
+#### swoole_http_client->push($data, $opcode, $fin);
+
+Push data to websocket client.
+
+#### swoole_http_client->isConnected();
+
+Check if the http connection is connected.
+
+#### swoole_http_client->close();
 
 Close the http connection.
-
-
-
-
-
 

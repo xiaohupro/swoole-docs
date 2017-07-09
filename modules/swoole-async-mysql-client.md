@@ -46,11 +46,11 @@ $db->connect($server, function ($db, $r) {
 
 #### swoole_mysql->construct()
 
-#### function swoole_mysql->on($event_name, callable $callback);
+#### swoole_mysql->on($event_name, callable $callback);
 
 Register callback function based on event name, current only 'Clost' event is supported.
 
-#### function swoole_mysql->connect(array $serverConfig, callable $callback);
+#### swoole_mysql->connect(array $serverConfig, callable $callback);
 
 Connect to the remote MySQL server.
 
@@ -71,7 +71,7 @@ $server = array(
 function onConnect(swoole_mysql $db, bool $result);
 ```
 
-#### function swoole_mysql->escape(string $str) : string
+#### swoole_mysql->escape(string $str) : string
 
 Escape SQL strings to avoid SQL injection attacks.
 
@@ -91,7 +91,7 @@ $db->connect($server, function ($db, $result) {
 });
 ```
 
-#### function swoole_mysql->query($sql, callable $callback);
+#### swoole_mysql->query($sql, callable $callback);
 
 Run SQL query.
 
@@ -99,7 +99,7 @@ Callback function:
 
 function onSQLReady(swoole_mysqli $link, mixed $result);
 
-#### function swoole_mysql->begin(callable $callback);
+#### swoole_mysql->begin(callable $callback);
 
 Start a MySQL transaction.
 
@@ -116,7 +116,7 @@ $db->begin(function( $db, $result) {
 });
 ```
 
-#### function swoole_mysql->commit(callable $callback);
+#### swoole_mysql->commit(callable $callback);
 
 Commit the MySQL transaction.
 
@@ -133,11 +133,11 @@ $db->begin(function( $db, $result) {
 });
 ```
 
-#### function swoole_mysql->rollback(callable $callback);
+#### swoole_mysql->rollback(callable $callback);
 
 Rollback the MySQL transaction.
 
-#### function swoole_mysql->close();
+#### swoole_mysql->close();
 
 Close the MySQL connection.
 

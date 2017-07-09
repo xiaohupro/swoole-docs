@@ -10,7 +10,23 @@ Lock types:
 * SWOOLE_MUTEX: Mutex
 * SWOOLE_SPINLOCK: spin lock
 
-Example:
+### Methods
+
+#### swoole_lock->__construct($type, $file_lock_location = '/tmp/file.lock');
+
+#### swoole_lock->__destruct();
+
+#### swoole_lock->lock();
+
+#### swoole_lock->trylock();
+
+#### swoole_lock->lock_read();
+
+#### swoole_lock->trylock_read();
+
+#### swoole_lock->unlock();
+
+### Example:
 
 ``` php
 <?php

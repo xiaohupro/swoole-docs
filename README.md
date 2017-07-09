@@ -50,6 +50,7 @@ $http->start();
 * [Golang style channels](https://en.wikipedia.org/wiki/Channel_\(programming\)) for inter-processes communication
 * System locks API: Filelock, Readwrite lock, semaphore, Mutex, spinlock
 * IPv4/IPv6/UnixSocket/TCP/UDP and SSL/TLS support
+* Fast serializer/unserializer
 
 ### Use cases
 

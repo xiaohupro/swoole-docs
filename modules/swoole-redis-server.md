@@ -2,6 +2,18 @@
 
 Swoole Redis server implements the Redis server side protocols based on Swoole TCP server API. 
 
+### Methods
+
+#### swoole_redis_server->start();
+
+Start the Redis protocol server.
+
+#### swoole_redis_server->setHandler(string $command, $callback);
+
+Set the handler functions for the Redis server.
+
+#### swoole_redis_server->format(int $type, $value);
+
 ### Example
 
 ``` php
