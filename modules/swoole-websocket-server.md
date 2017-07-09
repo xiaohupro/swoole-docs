@@ -4,10 +4,10 @@ The following PHP codes shows how to write a simple WebSocket server. The WebSoc
 
 ### Events
 
-* Open
-* Handshake
-* Message
-* Close
+* open
+* handshake
+* message
+* close
 
 ### Example
 
@@ -80,3 +80,27 @@ $server->on('handshake',function(\swoole_http_request $request,$swoole_http_resp
 * onOpen
 * onMessage
 * onHandShake
+
+### Methods
+
+#### void swoole_websocket_server->on($event_name, $callback);
+
+Register event callback functions before server started.
+
+#### void swoole_websocket_server->push($fd, $data, $opcode = 1, $fin = true);
+
+Push data to the connected websocket client.
+
+#### string swoole_websocket_server->pack($data, $length = DATA_LENGTH, $opcode = 1, $finish = true, $mask = false);
+
+Encode data.
+
+#### string swoole_websocket_server->unpack($data);
+
+Decode data.
+
+#### boolean swoole_websocket_server->exist($fd);
+
+Check if the connection to the websocket client is active.
+
+
