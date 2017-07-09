@@ -54,9 +54,9 @@ Schedule functions to run at set intervals, accurate to milliseconds.
 
 ## [Swoole Serialize](/modules/swoole-serialize.md) {#entry_h2_8}
 
-Schedule functions to run at set intervals, accurate to milliseconds.
+Fast serialization for PHP.
 
-## Swoole Memory Management
+## [Swoole Memory](/modules/swoole-memory.md)
 
 ### [Swoole Atomic](/modules/swoole-atomic.md) {#entry_h2_9}
 

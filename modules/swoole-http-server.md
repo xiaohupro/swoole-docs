@@ -79,8 +79,8 @@ server {
 
 Events:
 
-* request HTTP request
-* handshake HTTP2 handshake
+* request : HTTP request
+* handshake : HTTP2 handshake
 
 #### swoole_http_server->start();
 

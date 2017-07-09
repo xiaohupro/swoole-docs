@@ -47,23 +47,23 @@ $server->connections; // The connections established
 
 ### Events
 
-* Start
-* Shutdown
-* ManagerStart
-* ManagerStop
-* WorkerStart
-* WorkerStop
-* Connect
-* Receive
-* Packet
-* Close
-* BufferEmpty
-* BufferFull
-* Task
-* Timer
-* Finish
-* PipeMessage
-* WorkerError
+* start
+* shutdown
+* managerstart
+* managerstop
+* workerstart
+* workerstop
+* connect
+* receive
+* packet
+* close
+* bufferempty
+* bufferfull
+* task
+* timer
+* finish
+* pipemessage
+* workererror
 
 Example of writing callback functions, or register event callbacks:
 

@@ -4,6 +4,8 @@ The task process in swoole_server is syncing and blocking without using EventLoo
 
 ### Events
 
+NA
+
 ### Methods
 
 #### swoole_async_set(array $setting);

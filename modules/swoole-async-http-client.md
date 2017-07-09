@@ -4,6 +4,11 @@ Swoole Async HTTP client is a high performance and aync HTTP client supports Htt
 
 ### Events
 
+* connect
+* message
+* close
+* error
+
 ### Methods
 
 #### swoole_http_client->__construct(string $host, int port, bool $ssl = false);
@@ -89,13 +94,6 @@ $cli->post('/dump2.php', array("xxx" => 'abc', 'x2' => 'rango'), function ($cli)
 #### swoole_http_client->on(string $event, $callback);
 
 Register callback function by event name.
-
-Events:
-
-* connect
-* message
-* close
-* error
 
 #### swoole_http_client->get(string $path, callable $callback);
 

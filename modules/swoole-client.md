@@ -13,12 +13,12 @@ Compare with PHP *stream* functions, *swoole_client* is more advanced:
 
 ### Events
 
-* Connect
-* Receive
-* Close
-* Error 
-* BufferFull
-* BufferEmpty
+* connect
+* receive
+* close
+* error 
+* bufferfull
+* bufferempty
 
 ### Examples
 

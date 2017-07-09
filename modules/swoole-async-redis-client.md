@@ -24,7 +24,7 @@ sudo make install
 
 ### Events
 
-* Message
+* message
 
 ### Methods:
 

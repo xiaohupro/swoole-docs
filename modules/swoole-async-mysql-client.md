@@ -40,7 +40,7 @@ $db->connect($server, function ($db, $r) {
 
 ### Events
 
-* Connect
+* connect
 
 ### Methods:
 

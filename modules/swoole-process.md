@@ -87,7 +87,7 @@ Swoole process manager can be used to replace PHP *pcntl* extension. Compare wit
 
 ### Methods
 
-#### int swoole_process::__construct(mixed $function, $redirect_stdin_stdout = false, $create_pipe = true);
+#### int swoole_process->__construct(mixed $function, $redirect_stdin_stdout = false, $create_pipe = true);
 
 Construct a child process with the callback function executed in the child process, optionally redirect the standard I/O to pipes between the parent process and the child processes.
 
@@ -105,7 +105,7 @@ $process->pid
 $process->pipe
 ```
 
-#### bool swoole_process::name(string $new_process_name);
+#### bool swoole_process->name(string $new_process_name);
 
 Set name of the process started.
 
@@ -196,28 +196,28 @@ Close the pipe of the child process.
 
 Stop the child process.
 
-#### int swoole_process::kill($pid, $signo = SIGTERM);
+#### int swoole_process->kill($pid, $signo = SIGTERM);
 
 Send signal to the child process.
 
-#### array swoole_process::wait(bool $blocking = true);
+#### array swoole_process->wait(bool $blocking = true);
 
 Wait for the events of child processes.
 
-#### bool swoole_process::daemon(bool $nochdir = true, bool $noclose = true);
+#### bool swoole_process->daemon(bool $nochdir = true, bool $noclose = true);
 
 Change the process to be a daemon process.
 
 * $nochdir: whether change the current path.
 * $noclose: whether close the standard I/O of the process.
 
-#### bool swoole_process::signal(int $signo, callable $callback);
+#### bool swoole_process->signal(int $signo, callable $callback);
 
 Setup signal callback function.
 
-#### function swoole_process::alarm(int $interval_usec, int $type = ITIMER_REAL) : bool
+#### swoole_process->alarm(int $interval_usec, int $type = ITIMER_REAL) : bool
 
-#### function swoole_process::setaffinity(array $cpu_set);
+#### swoole_process->setaffinity(array $cpu_set);
 
 Set the CPU affinity of the process.
 
