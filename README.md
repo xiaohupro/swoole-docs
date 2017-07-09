@@ -135,7 +135,7 @@ Swoole table is a high performance memory management module, implemented based o
 
 Swoole provides the API to use mmap for files access.
 
-## [Swoole Serialize](/modules/swoole-serialize.md) {#entry_h2_8}
+#### [Swoole Serialize](/modules/swoole-serialize.md) {#entry_h2_8}
 
 Fast serialization for PHP.
 
