@@ -4,7 +4,7 @@ Memory management module enable developers managing memory like C language witho
 
 > The memory allocated by swoole_buffer is not shared memory and can not be accessed by multiple processes.
 
-### Example
+### Quick Example
 
 ``` php
 <?php

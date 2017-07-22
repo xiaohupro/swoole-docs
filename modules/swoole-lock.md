@@ -14,17 +14,35 @@ Lock types:
 
 #### swoole_lock->__construct($type, $file_lock_location = '/tmp/file.lock');
 
+Construct a lock.
+
 #### swoole_lock->__destruct();
+
+Destory a lock.
 
 #### swoole_lock->lock();
 
+Try to acquire the lock. It will block if the lock is not available.
+
+#### swoole_lock->lockwait($timeout = 1);
+
+Try to acquire the lock and waiting the lock for a duration before giving up.
+
 #### swoole_lock->trylock();
+
+Try to acquire the lock and return straight away even the lock is not available.
 
 #### swoole_lock->lock_read();
 
+Lock a read-write lock for reading.
+
 #### swoole_lock->trylock_read();
 
+Try to lock a read-write lock for reading and return straight away even the lock is not available.
+
 #### swoole_lock->unlock();
+
+Release the lock.
 
 ### Example:
 
