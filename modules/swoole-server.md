@@ -1,6 +1,6 @@
 # Swoole server
 
-Swoole server component enable developers to write TCP, UDP, UnixSocket servers. It supports IPv4, IPv6, One Way and Two Way SSL and TLS Encryption**. **Developers do not have to know the internal implementations , only have to write business logic in the callback functions.
+Swoole server provides the API for developers to write TCP, UDP, Unix Socket servers. It supports IPv4, IPv6, one Way, two Way SSL and TLS Encryption**. **Developers do not have to know the internal implementations, only have to write the logics of the server in the callback functions.
 
 ### Initialize the server
 
@@ -65,7 +65,7 @@ $server->connections; // The connections established
 * pipemessage
 * workererror
 
-Example of writing callback functions, or register event callbacks:
+Example of writing callback functions, or register event callback functions:
 
 ``` php
 <?php
@@ -74,10 +74,6 @@ $server->on('WorkerStart', function($serv, $workerId) {
     var_dump(get_included_files());
 });
 ```
-
-### How it works
-
-### Example
 
 ### Methods
 
@@ -579,7 +575,7 @@ $server->task("taskcallback", -1, function (swoole_server $serv, $task_id, $data
 
 Send data to the task worker processes after the delayed period of time.
 
-#### array swoole_server->taskWaitMulti(array $tasks, double $timeout);
+#### function swoole_server->taskWaitMulti(array $tasks, double $timeout);
 
 Execute multiple tasks concurrently, example:
 
@@ -603,7 +599,7 @@ if (isset($results[2])) {
 }
 ```
 
-#### $swoole_server->finish("response");
+#### function swoole_server->finish("response");
 
 Used in task process for sending result to the worker process when the task is finished.
 
@@ -624,7 +620,7 @@ Error codes:
 * 1007: Received data after connection has been closed.
 * 1008: The send buffer is full.
 
-#### $socket = $server->getSocket();
+#### $server->getSocket();
 
 Get socket and update the options of the socket.
 
