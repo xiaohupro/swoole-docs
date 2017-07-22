@@ -43,3 +43,12 @@ Set the value to the atomic object.
 #### swoole_atomic->cmpset($value);
 
 Compare and set the value of the atomic object. See more about [Compare and set](https://en.wikipedia.org/wiki/Compare-and-swap).
+
+#### swoole_atomic->wait($timeout);
+
+Wait the value to be changed for a duration.
+
+#### swoole_atomic->wakeup();
+
+Wakeup processes waiting on the lock.
+

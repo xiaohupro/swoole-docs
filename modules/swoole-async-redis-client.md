@@ -25,6 +25,7 @@ sudo make install
 ### Events
 
 * message
+* close
 
 ### Methods:
 
@@ -52,10 +53,6 @@ $client->connect('127.0.0.1', 6379, function (swoole_redis $client, $result) {
 
 Register callback function based on event name: *Close* and *Message*, *Receive*.
 
-#### function swoole_redis->__call(string $command, array $params);
-
-Execute redis client commands: [http://redis.io/commands](http://redis.io/commands)
-
 Example:
 
 ``` php
@@ -77,6 +74,17 @@ $client->connect('127.0.0.1', 6379, function (swoole_redis $client, $result) {
     $client->subscribe('msg_0');
 });
 ```
+
+#### function swoole_redis->__call(string $command, array $params);
+
+Execute redis client commands: [http://redis.io/commands](http://redis.io/commands)
+
+Commands:
+
+* subscribe
+* psubscribe
+* unsubscribe
+* punsubscribe
 
 #### function swoole_redis->close();
 
