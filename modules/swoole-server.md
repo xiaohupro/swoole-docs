@@ -2,14 +2,22 @@
 
 Swoole server provides the API for developers to write TCP, UDP, Unix Socket servers. It supports IPv4, IPv6, one Way, two Way SSL and TLS Encryption**. **Developers do not have to know the internal implementations, only have to write the logics of the server in the callback functions.
 
-### Initialize the server
+### Table of Contents
+
+* [QuickStart](#qs)
+* [Events](#events)
+* [Methods](#methods)
+
+### <a name="qs">QuickStart</a>
+
+#### Initialize the server
 
 ``` php
 <?php
 $server = new swoole_server("127.0.0.1", 9501, SWOOLE_BASE, SWOOLE_SOCK_TCP);
 ```
 
-### Runtime paramaters
+#### Set runtime paramaters
 
 ``` php
 <?php
@@ -20,7 +28,7 @@ $server->set(array(
 ));
 ```
 
-### Callback functions
+#### Register callback functions
 
 ``` php
 <?php
@@ -29,14 +37,14 @@ $server->on('Receive', 'my_onReceive');
 $server->on('Close', 'my_onClose');
 ```
 
-### Start the server
+#### Start the server
 
 ``` php
 <?php
 $server->start();
 ```
 
-### Attributes
+#### Get server attributes
 
 ``` php
 <?php
@@ -45,7 +53,7 @@ $server->master_pid;  // PID of master process, send SIGTERM signal to this proc
 $server->connections; // The connections established
 ```
 
-### Events
+### <a name="events">Events</a>
 
 * start
 * shutdown
@@ -75,7 +83,7 @@ $server->on('WorkerStart', function($serv, $workerId) {
 });
 ```
 
-### Methods
+### <a name="methods">Methods</a>
 
 #### swoole_server::__construct
 
