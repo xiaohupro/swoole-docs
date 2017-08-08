@@ -1,103 +1,99 @@
-# Installation
+## Installation
 
-#### Prerequisites
+### Installation
 
-1. Operation system: Linux, FreeBSD or MacOS
-2. Linux kernel version &gt;= 2.3.32
-3. PHP version &gt;= 5.3.10
-4. GCC version &gt;= 4.4 or Clang
-5. Cmake version &gt;= 2.4 \(Cmake is not required to compile libswoole as C/C++ library\)
+#### Install by binary releases
 
-> Recommend Linux version: Ubuntu 14, CentOS 7 or greater.
+##### Linux users
 
-#### Installation
-
-##### Debian and Ubuntu users
+> Swoole is available as a PECL compatible package
 
 ``` bash
 pecl install swoole
 ```
-
-##### Fedora and RedHat users
-
-``` bash
-pecl install swoole
-```
-
 ##### MacOS X \(macOS\) users
 
-It is highly recommended to install Swoole on Mac OS X or macOS systems via homebrew:
+> It is highly recommended to install Swoole on Mac OS X or macOS systems via homebrew
 
 ``` bash
 brew install swoole
 ```
 
-##### Building swoole from sources
+#### Building swoole from sources
+
+##### Download link
+
+You are recommended to download the latest stable version of swoole
+
+- [https://github.com/swoole/swoole-src/releases](https://github.com/swoole/swoole-src/releases)
+- [http://pecl.php.net/package/swoole](http://pecl.php.net/package/swoole)
+- [http://git.oschina.net/swoole/swoole/releases](http://git.oschina.net/swoole/swoole/releases)
+
+##### Steps of Compilation 
+
+The process of compile and install the swoole extension for PHP
 
 ``` bash
-phpize
-./configure
-make 
-sudo make install
+cd swoole          #  enter the directory of swoole source code   
+phpize       	   #  prepare the build environment for a PHP extension
+./configure        #  add configuration paramaters as needed
+make 			   #  a successful result of make is swoole/module/swoole.so
+sudo make install  #  install the swoole into the PHP extensions directory
 ```
 
-##### Configuration paramaters
+### Enable swoole
 
-``` bash
---enable-swoole-debug
+After install the swoole extension to the PHP extensions directory, you will need to adjust php.ini and add an extension=swoole.so line before you can use the extension.
+
+```bash
+php -i | grep php.ini                      # check the php.ini file location
+sudo echo "extension=swoole.so" > php.ini  # add the extension=swoole.so to the end of php.ini
+php -m | grep swoole                       # check if the swoole extension has been enabled
 ```
+
+### Configuration paramaters
+
+These configuration are used for enable some feature.
+
+`--enable-swoole-debug` 
 
 Enable the debug logs of swoole, do not enable this in production environment.
 
-``` bash
---enable-sockets
-```
+`--enable-sockets` 
 
-Enable sockets support, it depends on the PHP sockets extension. 
+Enable sockets support, it depends on the PHP sockets extension. If this configuration has been enabled, the function swoole_event_add() could add the connection created by the sockets extension to the event loop of swoole. And the function getSocket() depends on the configuration.  
 
-``` bash
---enable-openssl
-``` 
+`--enable-openssl` 
 
-Enable openssl support
+Enable openssl support, it depends on the libssl.so library given by os
 
-``` bash
---with-openssl-dir
-```
+`--with-openssl-dir`
 
-Change the default path of openssl library, for example:`--with-openssl-dir=/opt/openssl/.`
+Set the path of openssl library, for example:`--with-openssl-dir=/opt/openssl/.`
 
-``` bash
---enable-http2
-```
+`--enable-http2`
 
 Enable the support of HTTP2, it depends on nghttp2 library.
 
-``` bash
---enable-async-redis
-```
+`--enable-async-redis`
 
 Enable the suppor of async redis client, it depends on hiredis library.
 
-``` bash
---enable-timewheel
-```
+`--enable-timewheel`
 
 Enable the support of timewheel, optimize the heartbeat algorithm.
 
-``` bash
---enable-mysqlnd
-```
+> This is an experimental feature, do not use in production environment
+
+`--enable-mysqlnd`
 
 Enable the support of mysqlnd, for example `swoole_mysql::escapse`
 
-``` bash
---enable-ringbuffer
-```
+`--enable-ringbuffer`
 
 Enable the support of ringbuffer memory pool
 
 > This is an experimental feature, do not use in production environment
 
 
-
+**After in the installation of swoole,  try the [examples](/get-started/examples.md) written by swoole.**
