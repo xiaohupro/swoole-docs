@@ -1,6 +1,6 @@
 # Swoole Docs
 
-Swoole is an high-performance network framework uses an event-driven, asynchronous, non-blocking I/O model makes it scalable and efficient. It is written in C language without 3rd party libraries.
+Swoole is an high-performance network framework uses an event-driven, asynchronous, non-blocking I/O model makes it scalable and efficient. It is written in C language without 3rd party libraries as PHP extension.
 
 It enables PHP developers to write high-performance, scalable, concurrent TCP, UDP, Unix Socket, HTTP, WebSocket services with PHP programming language without too much knowledge about non-blocking I/O programming and low-level Linux kernel.
 
@@ -65,11 +65,21 @@ Swoole framework is open source and free. Released under the license of Apache 2
 
 ### [Get started](get-started.md)
 
-#### [Installation](/get-started/installation.md) {#entry_h2_0}
+Environment preparation for swoole.
+
+#### [Preparation](/get-started/preparation.md)
+
+The installation guide of swoole.
+
+#### [Installation Guide](/get-started/installation.md)
+
+Try the examples of swoole.
+
+#### [Code Examples](/get-started/examples.md)
 
 ### [Swoole Modules](/modules.md)
 
-#### [Swoole Server](/modules/swoole-server.md) {#entry_h2_0}
+#### [Swoole Server](/modules/swoole-server/introduction.md)
 
 Swoole server provides the API to write TCP / UDP / UnixSocket servers.
 
@@ -85,65 +95,65 @@ Swoole WebSocket server provides the API to write WebSocket servers.
 
 Swoole Redis server provides the API to write TCP servers with Redis protocol.
 
-#### [Swoole TCP/UDP Client](/modules/swoole-client.md) {#entry_h2_1}
+#### [Swoole TCP/UDP Client](/modules/swoole-client.md)
 
 Swoole client provides the API to write TCP/UDP/UnixSocket/HTTP clients, supports IPv4/IPv6 protocol. Developers can write sync or async client side features with swoole client API.
 
-#### [Swoole Process Manager](/modules/swoole-process.md) {#entry_h2_2}
+#### [Swoole Process Manager](/modules/swoole-process.md)
 
 Linux process management module can be used to create new Linux process, manage the processes, and the communication between different processes.
 
-#### [Swoole Async File I/O](/modules/swoole-async-io.md) {#entry_h2_3}
+#### [Swoole Async File I/O](/modules/swoole-async-io.md)
 
 Async API includes the async File IO API, Timer, async HTTP client API, async MySQL client API,  async Redis client API and async DNS client API.
 
-#### [Swoole MySQL Client](/modules/swoole-async-mysql-client.md) {#entry_h2_4}
+#### [Swoole MySQL Client](/modules/swoole-async-mysql-client.md)
 
 The swoole async MySQL client is a replacement of the other sync MySQL clients: libmysqlclient, mysqlnd, mysqli.
 
-#### [Swoole Redis Client](/modules/swoole-async-redis-client.md) {#entry_h2_5}
+#### [Swoole Redis Client](/modules/swoole-async-redis-client.md)
 
 Swoole async Redis client is based on *hiredis*.
 
-#### [Swoole Async Http/WebSocket Client](/modules/swoole-async-http-client.md) {#entry_h2_6}
+#### [Swoole Async Http/WebSocket Client](/modules/swoole-async-http-client.md)
 
 Swoole Async HTTP client is a high performance and async HTTP client supports Http-Chun, Keep-Alive, form-data.
 
-#### [Swoole Async Http2 Client](/modules/swoole-async-http2-client.md) {#entry_h2_7}
+#### [Swoole Async Http2 Client](/modules/swoole-async-http2-client.md)
 
 Http2.0 client support stream and multiplexing. Multiple GET or POST request can be sent over the same TCP connection.
 
-#### [Swoole EventLoop](/modules/swoole-event-loop.md) {#entry_h2_8}
+#### [Swoole EventLoop](/modules/swoole-event-loop.md)
 
 Developers can use Swoole EventLoop API to use the system EventLoop.
 
 #### [Swoole Memory Management](/modules/swoole-memory.md)
 
-#### [Swoole Atomic](/modules/swoole-atomic.md) {#entry_h2_9}
+#### [Swoole Atomic](/modules/swoole-atomic.md)
 
 Integer variable allows any processor to atomically test and modify. Implemented based on CPU atomic instructions.
 
-#### [Swoole Buffer](/modules/swoole-buffer.md) {#entry_h2_10}
+#### [Swoole Buffer](/modules/swoole-buffer.md)
 
 The memory management module enables developers managing memory like C language without worrying about memory allocation, release.
 
-#### [Swoole Table](/modules/swoole-table.md) {#entry_h2_11}
+#### [Swoole Table](/modules/swoole-table.md)
 
 Swoole table is a high performance memory management module, implemented based on shared memory and spin lock.
 
-#### [Swoole MMap](/modules/swoole-mmap.md) {#entry_h2_12}
+#### [Swoole MMap](/modules/swoole-mmap.md)
 
 Swoole provides the API to use mmap for files access.
 
-#### [Swoole Serialize](/modules/swoole-serialize.md) {#entry_h2_8}
+#### [Swoole Serialize](/modules/swoole-serialize.md)
 
 Fast serialization for PHP.
 
-#### [Swoole Channel](/modules/swoole-channel.md) {#entry_h2_13}
+#### [Swoole Channel](/modules/swoole-channel.md)
 
 Memory data structure likes Chan in Golang, implemented based on shared memory and Mutex locks. It can be used as high-performance message queue in memory. 
 
-#### [Swoole Lock](/modules/swoole-lock.md) {#entry_h2_14}
+#### [Swoole Lock](/modules/swoole-lock.md)
 
 Swoole locks enable PHP developers to use locks for data synchronisation between multiple threads or processes.
 
