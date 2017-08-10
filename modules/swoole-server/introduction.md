@@ -20,8 +20,8 @@ Swoole server provides the API for developers to write TCP, UDP, Unix Socket asy
 
 * [Performance testing](/modules/swoole-server/performance-testing.md)
 
-### Swoole Working Flow Chart
+### Swoole Working Flow Chart(for SWOOLE_PROCESS mode)
 ![Swoole Flow](https://github.com/yannsun/swoole-docs/blob/master/static/img/swoole_process.png)
 
-### Swoole Process/Thread Structure Chart
+### Swoole Process/Thread Structure Chart(for SWOOLE_PROCESS mode)
 ![Swoole Structure](https://github.com/yannsun/swoole-docs/blob/master/static/img/swoole_structure.png)
