@@ -22,3 +22,6 @@ Swoole server provides the API for developers to write TCP, UDP, Unix Socket asy
 
 ### Swoole Working Flow Chart
 ![Swoole Flow](https://github.com/yannsun/swoole-docs/blob/master/static/img/swoole_process.png)
+
+### Swoole Process/Thread Structure Chart
+![Swoole Structure](https://github.com/yannsun/swoole-docs/blob/master/static/img/swoole_structure.png)
