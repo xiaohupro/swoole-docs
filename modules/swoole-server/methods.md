@@ -44,7 +44,9 @@ $http->start();
 ```
 ##### Listen on a port defined in systemd
 
-*swoole.socket*
+The swoole-1.9.7 adds the support for `systemd socket`. The port listened on can be setted by the configuration of systemd.
+
+`swoole.socket`
 ``` bash
 [Unit]
 Description=Swoole Socket
@@ -56,7 +58,7 @@ Accept=false
 WantedBy = sockets.target
 ```
 
-*swoole.service*
+`swoole.service`
 ``` bash
 [Service]
 Type=forking
@@ -69,7 +71,7 @@ ExecReload=/bin/kill -USR1 $MAINPID
 WantedBy = multi-user.target
 ```
 
-*server.php*
+`server.php`
 ``` php
 $http = new swoole_http_server("systemd");
 
@@ -86,7 +88,7 @@ $http->on('request', function ($request, $response) {
 $http->start();
 ```
 
-*Start the systemd service*
+`Start the systemd service`
 
 ``` bash
 sudo systemctl enable swoole.socket
