@@ -3,7 +3,7 @@
 ### Methods
 
 #### Table of Contents
-- swoole\_server::\_\_construct(string $host, int $port = 0, int $mode = SWOOLE_PROCESS, int $sock_type = SWOOLE_SOCK_TCP)
+- swoole\_server::\_\_construct
 - swoole\_server->set(array $setting)
 
 #### swoole_server::__construct
