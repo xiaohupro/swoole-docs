@@ -23,7 +23,7 @@ $serv = new swoole_server(string $host, int $port, int $mode = SWOOLE_PROCESS, i
     * SWOOLE_SOCK_UDP6: UDP IPv6
     * SWOOLE_UNIX_DGRAM: Unix socket dgram
     * SWOOLE_UNIX_STREAM: Unix socket stream
-* Enable SSL: $sock_type | SWOOLE_SSL
+* Enable SSL: `$sock_type | SWOOLE_SSL`. To enable ssl, it must set [the configuration about ssl](/modules/swoole-server/configuration.md).
 
 Example:
 
