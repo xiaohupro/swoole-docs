@@ -26,6 +26,7 @@ $server->on('Connect', 'my_onConnect');
 $server->on('Receive', 'my_onReceive');
 $server->on('Close', 'my_onClose');
 ```
+> There are [four types of callback functions](/modules/swoole-server/common-problems.md)
 
 ### Start the server
 
