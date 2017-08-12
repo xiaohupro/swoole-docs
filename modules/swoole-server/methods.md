@@ -5,6 +5,7 @@
 #### Table of Contents
 - swoole\_server::\_\_construct
 - swoole\_server->set(array $setting)
+- swoole_server->on(string $event, mixed $callback)
 
 #### swoole_server::__construct
 
@@ -102,7 +103,7 @@ sudo systemctl start swoole.service
 
 #### swoole_server->set(array $setting)
 
-Set the settings of the swoole server:
+Set the runtime settings of the swoole server. The settings can be accessed by `$server->setting` when the swoole server has started.
 
 ``` php
 <?php
@@ -138,6 +139,8 @@ Other settings:
     * 2: assignment by mod
     * 3: preemptive assignment
 
+> Check [the full list of settings](/modules/swoole-server/configuratio.md)
+
 #### bool swoole_server->on(string $event, mixed $callback);
 
 Register callback function for the events:
@@ -157,6 +160,7 @@ $server->on('close', function ($server, $fd) {
 });
 $server->start();
 ```
+> Check [the full list of events](/modules/swoole-server/callback-functions.md)
 
 #### function swoole_server->addListener(string $host, int $port, $type = SWOOLE_SOCK_TCP);
 
