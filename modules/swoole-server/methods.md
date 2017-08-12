@@ -3,8 +3,8 @@
 ### Methods
 
 #### Table of Contents
-- [swoole\_server::__construct](#swoole_server::__construct)
-- [swoole\_server->set(array $setting)](swoole_server->set(array $setting))
+- [swoole\_server::\_\_construct](/modules/swoole-server/methods.md#swoole_server::__construct)
+- [swoole\_server->set(array $setting)](/modules/swoole-server/methods.md#swoole_server->set(array $setting))
 
 #### swoole_server::__construct
 
