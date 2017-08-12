@@ -1,4 +1,6 @@
-## Methods
+## Swoole Server
+
+### Methods
 
 #### swoole_server::__construct
 
@@ -10,9 +12,9 @@ Construct a swoole server object:
 $serv = new swoole_server(string $host, int $port, int $mode = SWOOLE_PROCESS, int $sock_type = SWOOLE_SOCK_TCP);
 ```
 * $host: the ip address of the server
-* $port: the port of the server
+* $port: the port of the server (it needs root privileges if the port is litte than 1024)
 * $mode: the running mode of the server:
-    * SWOOLE_PROCESS: multiple process mode, the business logic is running in child processes
+    * SWOOLE_PROCESS: multiple process mode, the business logic is running in child processes, the default running mode of server
     * SWOOLE_BASE: reactor based mode, the business logic is running in the reactor
 * $sock_type: the socket type of the server:
     * SWOOLE_SOCK_TCP: TCP
