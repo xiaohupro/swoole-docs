@@ -164,7 +164,7 @@ $server->start();
 
 #### function swoole_server->addListener(string $host, int $port, $type = SWOOLE_SOCK_TCP);
 
-Add more listening IP or port for the server.
+Add more listening IP or port for the server. The connection information can be acccessed by `$server->connection_info()` when the server has started. By the connection information, you can distinguish the source port of the connection. 
 
 Example:
 
