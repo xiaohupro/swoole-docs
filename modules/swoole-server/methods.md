@@ -9,7 +9,7 @@ Construct a swoole server object:
 ``` php
 <?php
 
-$serv = new swoole_server(string $host, int $port, int $mode = SWOOLE_PROCESS, int $sock_type = SWOOLE_SOCK_TCP);
+$serv = new swoole_server(string $host, int $port = 0, int $mode = SWOOLE_PROCESS, int $sock_type = SWOOLE_SOCK_TCP);
 ```
 * $host: the ip address of the server
 * $port: the port of the server (it needs root privileges if the port is litte than 1024)
@@ -28,6 +28,8 @@ $serv = new swoole_server(string $host, int $port, int $mode = SWOOLE_PROCESS, i
 Example:
 
 ##### Listen on a random port:
+
+The swoole supports the feature of listening on a random port. When the argument `$port` isn't seted or is `0`, the swoole will choose a random and available port to listen on. You can use `$server->port` to listen on. 
 
 ``` php
 <?php
