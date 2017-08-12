@@ -2,6 +2,10 @@
 
 ### Methods
 
+#### Table of Contents
+- [swoole_server::__construct](#swoole_server::__construct)
+- [swoole_server->set(array $setting)](swoole_server->set(array $setting))
+
 #### swoole_server::__construct
 
 Construct a swoole server object:
@@ -96,7 +100,7 @@ sudo systemctl start swoole.socket
 sudo systemctl start swoole.service
 ```
 
-#### function swoole_server->set(array $setting);
+#### swoole_server->set(array $setting)
 
 Set the settings of the swoole server:
 
