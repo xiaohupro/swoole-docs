@@ -3,9 +3,10 @@
 ### Methods
 
 #### Table of Contents
-- swoole\_server::\_\_construct
-- swoole\_server->set(array $setting)
+- swoole_server::__construct
+- swoole_server->set(array $setting)
 - swoole_server->on(string $event, mixed $callback)
+- swoole_server->addListener(string $host, int $port, $type = SWOOLE_SOCK_TCP)
 
 #### swoole_server::__construct
 
@@ -16,12 +17,12 @@ Construct a swoole server object:
 
 $serv = new swoole_server(string $host, int $port = 0, int $mode = SWOOLE_PROCESS, int $sock_type = SWOOLE_SOCK_TCP);
 ```
-* $host: the ip address of the server
-* $port: the port of the server (it needs root privileges if the port is litte than 1024)
-* $mode: the running mode of the server:
+* `$host`: the ip address of the server
+* `$port`: the port of the server (it needs root privileges if the port is litte than 1024)
+* `$mode`: the running mode of the server:
     * SWOOLE_PROCESS: multiple process mode, the business logic is running in child processes, the default running mode of server
     * SWOOLE_BASE: reactor based mode, the business logic is running in the reactor
-* $sock_type: the socket type of the server:
+* `$sock_type`: the socket type of the server:
     * SWOOLE_SOCK_TCP: TCP
     * SWOOLE_SOCK_TCP6: TCP IPv6
     * SWOOLE_SOCK_UDP: UDP
@@ -105,18 +106,6 @@ sudo systemctl start swoole.service
 
 Set the runtime settings of the swoole server. The settings can be accessed by `$server->setting` when the swoole server has started.
 
-``` php
-<?php
-$server->set(array(
-    'reactor_num' => 2, //reactor thread num
-    'worker_num' => 4,    //worker process num
-    'backlog' => 128,   //listen backlog
-    'max_request' => 50,
-    'dispatch_mode' => 1,
-));
-```
-
-> Have to be set before swoole_server->start()
 
 Other settings:
 
@@ -141,9 +130,27 @@ Other settings:
 
 > Check [the full list of settings](/modules/swoole-server/configuratio.md)
 
+#### Example
+``` php
+<?php
+$server->set(array(
+    'reactor_num' => 2, //reactor thread num
+    'worker_num' => 4,    //worker process num
+    'backlog' => 128,   //listen backlog
+    'max_request' => 50,
+    'dispatch_mode' => 1,
+));
+```
+
 #### bool swoole_server->on(string $event, mixed $callback);
 
 Register callback function for the events:
+
+* $events
+
+> Check [the full list of events](/modules/swoole-server/callback-functions.md)
+
+##### Example
 
 ``` php
 <?php
@@ -160,13 +167,33 @@ $server->on('close', function ($server, $fd) {
 });
 $server->start();
 ```
-> Check [the full list of events](/modules/swoole-server/callback-functions.md)
 
 #### function swoole_server->addListener(string $host, int $port, $type = SWOOLE_SOCK_TCP);
 
 Add more listening IP or port for the server. The connection information can be acccessed by `$server->connection_info()` when the server has started. By the connection information, you can distinguish the source port of the connection. 
 
-Example:
+##### Parameter
+
+* `$host`: the ip address of the server
+* `$port`: the port of the server 
+    - it needs root privileges if the port is litte than 1024
+    - the parameter `$port` will be ignored when the parameter `$sock_type` is setted to `SWOOLE_UNIX_DGRAM` or `SWOOLE_UNIX_STREAM`
+    - if the parameter `$port` is setted to `0`, the swoole server would use a random and available port
+
+* `$sock_type`: the socket type of the server:
+    * SWOOLE_SOCK_TCP: TCP
+    * SWOOLE_SOCK_TCP6: TCP IPv6
+    * SWOOLE_SOCK_UDP: UDP
+    * SWOOLE_SOCK_UDP6: UDP IPv6
+    * SWOOLE_UNIX_DGRAM: Unix socket dgram
+    * SWOOLE_UNIX_STREAM: Unix socket stream
+* Enable SSL: `$sock_type | SWOOLE_SSL`. To enable ssl, it must set [the configuration about ssl](/modules/swoole-server/configuration.md).
+
+##### Return
+
+The swoole_server_port object
+
+##### Example:
 
 ``` php
 <?php
@@ -186,7 +213,16 @@ echo $port->port;
 
 Add a user defined child process to the server. The process can be used as monitoring or other tasks.
 
-Example:
+##### Parameter
+
+* `$process` the swoole_process object defined by user
+    - Check [the document of swoole_proccess](/modules/swoole-process/introduction.md)
+
+##### Return
+
+The return value indicates the result of add proccess to swoole server.
+
+##### Example:
 
 ``` php
 <?php
