@@ -4,7 +4,7 @@
 
 #### Table of Contents
 
-- [swoole_server::\_\_construct](/modules/swoole-server/methods/construct.md)
+- [swoole_server::__construct](/modules/swoole-server/methods/construct.md)
 - swoole_server->set(array $setting)
 - swoole_server->on(string $event, mixed $callback)
 - swoole_server->addListener(string $host, int $port, $type = SWOOLE_SOCK_TCP)
