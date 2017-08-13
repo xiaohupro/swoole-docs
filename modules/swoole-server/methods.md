@@ -1,6 +1,6 @@
 ## Swoole Server
 
-### Methods
+### Methods List
 
 #### Table of Contents
 - swoole_server::__construct
