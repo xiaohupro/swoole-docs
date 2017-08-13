@@ -9,7 +9,7 @@ swoole_server::__construct(string $host, int $port = 0, int $mode = SWOOLE_PROCE
 ```
 #### Illustration
 
-Construct a swoole server object:
+Construct a swoole server object
 
 #### Parameter
 

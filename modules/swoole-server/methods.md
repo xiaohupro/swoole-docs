@@ -13,7 +13,6 @@
 
 Set the runtime settings of the swoole server. The settings can be accessed by `$server->setting` when the swoole server has started.
 
-
 Other settings:
 
 * max_conn => 10000: the max tcp connection number of the server
