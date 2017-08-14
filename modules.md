@@ -8,16 +8,17 @@ Swoole server provides the API to write TCP / UDP / UnixSocket servers.
 
 ### [Methods List](/modules/swoole-server/methods.md)
 
-### [Properties List](/modules/swoole-server-properties.md)
+### [Properties List](/modules/swoole-server/properties.md)
 
-### [Configuration](/modules/swoole-server-configuratio.md)
+### [Configuration](/modules/swoole-server/configuration.md)
 
-### [Predefined Constants](/modules/swoole-server-predefined-constants.md)
+### [Predefined Constants](/modules/swoole-server/predefined-constants.md)
 
-### [Callback functions](/modules/swoole-server-callback-functions.md)
+### [Callback functions](/modules/swoole-server/callback-functions.md)
 
-### [Performance testing](/modules/swoole-server-performance-testing.md)
+### [Performance testing](/modules/swoole-server/performance-testing.md)
 
+### [Common problems](/modules/swoole-server/common-problems.md)
 
 ## [Swoole HTTP Server](/modules/swoole-http-server/introduction.md)
 
