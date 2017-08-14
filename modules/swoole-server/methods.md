@@ -10,44 +10,6 @@
 - [swoole_server->addListener(string $host, int $port, $type = SWOOLE_SOCK_TCP)](/modules/swoole-server/methods/addListener.md)
 - [swoole_server->addProcess(swoole_process $process)](/modules/swoole-server/methods/addProcess.md)
 
-#### bool swoole_server->addProcess(swoole_process $process);
-
-Add a user defined child process to the server. The process can be used as monitoring or other tasks.
-
-##### Parameter
-
-* `$process` the swoole_process object defined by user
-    - Check [the document of swoole_proccess](/modules/swoole-process/introduction.md)
-
-##### Return
-
-The return value indicates the result of add proccess to swoole server.
-
-##### Example:
-
-``` php
-<?php
-$server = new swoole_server('127.0.0.1', 9501);
-
-$process = new swoole_process(function($process) use ($server) {
-    while (true) {
-        $msg = $process->read();
-        foreach($server->connections as $conn) {
-            $server->send($conn, $msg);
-        }
-    }
-});
-
-$server->addProcess($process);
-
-$server->on('receive', function ($serv, $fd, $from_id, $data) use ($process) {
-    // send the data received to all the child processes
-    $process->write($data);
-});
-
-$server->start();
-```
-
 #### bool swoole_server->listen(string $host, int $port, int $type);
 
 Alias of bool swoole_server->addlistener(string $host, int $port, int $type);
