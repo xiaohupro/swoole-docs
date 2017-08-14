@@ -11,41 +11,9 @@
 - [swoole_server->listen(string $host, int $port, $type = SWOOLE_SOCK_TCP)](/modules/swoole-server/methods/listen.md)
 - [swoole_server->addProcess(swoole_process $process)](/modules/swoole-server/methods/addProcess.md)
 - [swoole_server->start()](/modules/swoole-server/methods/start.md)
+- [swoole_server->reload(bool $only_reload_taskworkrer = false)](/modules/swoole-server/methods/reload.md)
+- [swoole_server->stop($worker_id)](/modules/swoole-server/methods/stop.md)
 
-
-#### bool swoole_server->reload(bool $only_reload_taskworkrer = false)
-
-Gracefully restart all the worker processes and reload the PHP files.
-
-##### Restart all the worker processes by signal
-
-``` bash
-kill -USR1 MASTER_PID
-```
-
-##### Only restart the task processes by signal
-
-``` bash
-kill -USR2 MASTER_PID
-```
-
-##### Get all the files loaded before the worker started
-
-``` php
-<?php
-$server->on('WorkerStart', function($serv, $workerId) {
-    var_dump(get_included_files());
-});
-```
-
-##### When using APC/OpCache
-
-* *stat* in APC/OpCache has to be enabled for code reload
-* Refresh OpCache with apc_clear_cache() or opcache_reset() if necessary
-
-#### function swoole_server->stop($worker_id);
-
-Stop current worker process or worker process by ID, this will emit 'WorkerStop' event and trigger the WorkerStop callback function.
 
 #### function swoole_server->kill($worker_id);
 
