@@ -13,11 +13,7 @@
 - [swoole_server->start()](/modules/swoole-server/methods/start.md)
 - [swoole_server->reload(bool $only_reload_taskworkrer = false)](/modules/swoole-server/methods/reload.md)
 - [swoole_server->stop($worker_id)](/modules/swoole-server/methods/stop.md)
-
-
-#### function swoole_server->kill($worker_id);
-
-Kill and terminate worker process by ID.
+- [swoole_server->shutdown()](/modules/swoole-server/methods/shutdown.md)
 
 #### void swoole_server->shutdown();
 
