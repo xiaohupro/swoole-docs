@@ -8,19 +8,10 @@
 - [swoole_server->set(array $setting)](/modules/swoole-server/methods/set.md)
 - [swoole_server->on(string $event, mixed $callback)](/modules/swoole-server/methods/on.md)
 - [swoole_server->addListener(string $host, int $port, $type = SWOOLE_SOCK_TCP)](/modules/swoole-server/methods/addListener.md)
+- [swoole_server->listen(string $host, int $port, $type = SWOOLE_SOCK_TCP)](/modules/swoole-server/methods/listen.md)
 - [swoole_server->addProcess(swoole_process $process)](/modules/swoole-server/methods/addProcess.md)
+- [swoole_server->start()](/modules/swoole-server/methods/start.md)
 
-#### bool swoole_server->listen(string $host, int $port, int $type);
-
-Alias of bool swoole_server->addlistener(string $host, int $port, int $type);
-
-#### bool swoole_server->start()
-
-Start the swoole server, it will create worker_num + 2 processes by default:
-
-* main process: running multiple threads reactor, receive new connections and assign connections to worker processes
-* manager process: managing the worker processes
-* worker_num * child processes: process the data and business logics
 
 #### bool swoole_server->reload(bool $only_reload_taskworkrer = false)
 
