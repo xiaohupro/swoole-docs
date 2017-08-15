@@ -14,50 +14,10 @@
 - [swoole_server->reload(bool $only_reload_taskworkrer = false)](/modules/swoole-server/methods/reload.md)
 - [swoole_server->stop($worker_id)](/modules/swoole-server/methods/stop.md)
 - [swoole_server->shutdown()](/modules/swoole-server/methods/shutdown.md)
+- [swoole_server->tick(int $intval_ms, mixed $callback_function)](/modules/swoole-server/methods/tick.md)
+- [swoole_server->after(int $after_time_ms, mixed $callback_function)](/modules/swoole-server/methods/after.md)
+- [swoole_server->defer(callable $callback)](/modules/swoole-server/methods/defer.md)
 
-#### void swoole_server->shutdown();
-
-Shutdown the master server process, this function can be called in worker processes.
-
-##### Shutdown server by system signal *SIGTERM*
-
-``` bash
-kill -15 MASTER_PID
-```
-
-#### $server->tick(1000, function() use ($server, $fd))
-
-Trigger a timer tick by interval. Alias of function *swoole_timer_tick()*.
-
-Example:
-
-``` php
-<?php
-function onReceive($server, $fd, $from_id, $data) {
-    $server->tick(1000, function() use ($server, $fd) {
-        $server->send($fd, "hello world");
-    });
-}
-```
-
-#### swoole_server->after(int $after_time_ms, mixed $callback_function);
-
-Trigger a one time tick in the future. Alias of function *swoole_timer_after()*.
-
-#### function swoole_server->defer(callable $callback);
-
-Delay execution of the callback function at the end of current *EventLoop*. Alias of function *swoole_event_defer()*.
-
-Example:
-
-``` php
-<?php
-function query($server, $db) {
-    $server->defer(function() use ($db) {
-        $db->close();
-    });
-}
-```
 
 #### $server->clearTimer($id);
 
