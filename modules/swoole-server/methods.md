@@ -19,13 +19,8 @@
 - [swoole_server->defer(callable $callback)](/modules/swoole-server/methods/defer.md)
 - [swoole_server->clearTimer(int $timer_id)](/modules/swoole-server/methods/clearTimer.md)
 - [swoole_server->close(int $fd, bool $reset = false)](/modules/swoole-server/methods/close.md)
+- [swoole_server->send(int $fd, string $data, int $reactorThreadId = 0)](/modules/swoole-server/methods/send.md)
 
-
-#### bool swoole_server->send(int $fd, string $data, int $reactorThreadId = 0);
-
-Send data to the remote TCP socket.
-
-> The max TCP data size is 2MB, and the max UDP data size is 64KB.
 
 #### bool swoole_server->sendfile(int $fd, string $filename, int $offset =0, int $length = 0);
 
