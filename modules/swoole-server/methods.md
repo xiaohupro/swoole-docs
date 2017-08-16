@@ -17,20 +17,8 @@
 - [swoole_server->tick(int $intval_ms, mixed $callback_function)](/modules/swoole-server/methods/tick.md)
 - [swoole_server->after(int $after_time_ms, mixed $callback_function)](/modules/swoole-server/methods/after.md)
 - [swoole_server->defer(callable $callback)](/modules/swoole-server/methods/defer.md)
+- [swoole_server->clearTimer(int $timer_id)](/modules/swoole-server/methods/clearTimer.md)
 
-
-#### $server->clearTimer($id);
-
-Cancel the timer tick or one time tick. Alias of function *swoole_timer_clear*.
-
-Example:
-
-``` php
-<?php
-$timer_id = $server->tick(1000, function ($id) use ($server) {
-    $server->clearTimer($id);
-});
-```
 
 #### bool swoole_server->close(int $fd, bool $reset = false);
 
