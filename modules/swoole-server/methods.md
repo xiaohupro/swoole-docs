@@ -20,36 +20,11 @@
 - [swoole_server->clearTimer(int $timer_id)](/modules/swoole-server/methods/clearTimer.md)
 - [swoole_server->close(int $fd, bool $reset = false)](/modules/swoole-server/methods/close.md)
 - [swoole_server->send(int $fd, string $data, int $reactorThreadId = 0)](/modules/swoole-server/methods/send.md)
+- [swoole_server->sendfile(int $fd, string $filename, int $offset =0, int $length = 0)](/modules/swoole-server/methods/sendfile.md)
+- [swoole_server->sendto(string $ip, int $port, string $data, int $server_socket = -1)](/modules/swoole-server/methods/sendto.md)
+- [swoole_server->sendwait(int $fd, string $send_data)](/modules/swoole-server/methods/send_wait.md)
 
 
-#### bool swoole_server->sendfile(int $fd, string $filename, int $offset =0, int $length = 0);
-
-Send large size data or files to the remote TCP socket. A wrapper of the *sendfile* system call.
-
-Example:
-
-``` php
-<?php
-$server->sendfile($fd, __DIR__.'/test.jpg');
-```
-
-#### bool swoole_server->sendto(string $ip, int $port, string $data, int $server_socket = -1);
-
-Send data to the remote UDP address.
-
-Example:
-
-```php
-<?php
-$server->sendto('220.181.57.216', 9502, "hello world");
-$server->sendto('2600:3c00::f03c:91ff:fe73:e98f', 9501, "hello world");
-```
-
-#### bool swoole_server->sendwait(int $fd, string $send_data);
-
-Send data to the remote socket in the blocking way.
-
-> Only available in SWOOLE_BASE mode.
 
 #### bool swoole_server->sendMessage(string $message, int $dst_worker_id);
 
