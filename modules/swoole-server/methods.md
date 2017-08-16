@@ -18,11 +18,8 @@
 - [swoole_server->after(int $after_time_ms, mixed $callback_function)](/modules/swoole-server/methods/after.md)
 - [swoole_server->defer(callable $callback)](/modules/swoole-server/methods/defer.md)
 - [swoole_server->clearTimer(int $timer_id)](/modules/swoole-server/methods/clearTimer.md)
+- [swoole_server->close(int $fd, bool $reset = false)](/modules/swoole-server/methods/close.md)
 
-
-#### bool swoole_server->close(int $fd, bool $reset = false);
-
-Close the connection to the remote TCP socket and emit *Close* event.
 
 #### bool swoole_server->send(int $fd, string $data, int $reactorThreadId = 0);
 
