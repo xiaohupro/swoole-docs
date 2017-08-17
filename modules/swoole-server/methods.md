@@ -38,3 +38,4 @@
 - [swoole_server->heartbeat(bool $if_close_connection = true)](/modules/swoole-server/methods/heartbeat.md)
 - [swoole_server->getLastError()](/modules/swoole-server/methods/getlasterror.md)
 - [swoole_server->getSocket()](/modules/swoole-server/methods/getsocket.md)
+- [swoole_server->protect(int $fd, bool $value = true)](/modules/swoole-server/methods/protect.md)
