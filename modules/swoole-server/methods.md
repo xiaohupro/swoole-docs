@@ -33,39 +33,10 @@
 - [swoole_server->stats()](/modules/swoole-server/methods/stats.md)
 - [swoole_server->task(mixed $data, int $dst_worker_id = -1)](/modules/swoole-server/methods/task.md)
 - [swoole_server->taskwait(mixed $task_data, float $timeout = 0.5, int $dst_worker_id = -1)](/modules/swoole-server/methods/taskwait.md)
+- [swoole_server->taskWaitMulti(array $tasks, double $timeout)](/modules/swoole-server/methods/taskwaitmulti.md)
+- [swoole_server->finish(string $data)](/modules/swoole-server/methods/finish.md)
 
 
-#### string $result = swoole_server->taskwait(mixed $task_data, float $timeout = 0.5, int $dst_worker_id = -1);
-
-Send data to the task worker processes after the delayed period of time.
-
-#### function swoole_server->taskWaitMulti(array $tasks, double $timeout);
-
-Execute multiple tasks concurrently, example:
-
-``` php
-<?php
-$tasks[] = mt_rand(1000, 9999); 
-$tasks[] = mt_rand(1000, 9999); 
-$tasks[] = mt_rand(1000, 9999); 
-var_dump($tasks);
-
-$results = $serv->taskWaitMulti($tasks, 10.0);
-
-if (!isset($results[0])) {
-    echo "Task 1: timeout.\n";
-}
-if (isset($results[1])) {
-    echo "Task 2: {$results[1]}\n";
-}
-if (isset($results[2])) {
-    echo "Task 3: {$results[2]}\n";
-}
-```
-
-#### function swoole_server->finish("response");
-
-Used in task process for sending result to the worker process when the task is finished.
 
 #### array swoole_server::heartbeat(bool $if_close_connection = true);
 
