@@ -23,92 +23,12 @@
 - [swoole_server->sendfile(int $fd, string $filename, int $offset =0, int $length = 0)](/modules/swoole-server/methods/sendfile.md)
 - [swoole_server->sendto(string $ip, int $port, string $data, int $server_socket = -1)](/modules/swoole-server/methods/sendto.md)
 - [swoole_server->sendwait(int $fd, string $send_data)](/modules/swoole-server/methods/send_wait.md)
+- [swoole_server->swoole_server->sendMessage(string $message, int $dst_worker_id)](/modules/swoole-server/methods/sendMessage.md)
+- [swoole_server->swoole_server->exist(int $fd)](/modules/swoole-server/methods/exit.md)
+- [swoole_server->swoole_server->pause(int $fd)](/modules/swoole-server/methods/pause.md)
+- [swoole_server->swoole_server->resume(int $fd)](/modules/swoole-server/methods/resume.md)
+- [swoole_server->swoole_server->connection_info(int $fd, int $from_id, bool $ignore_close = false)](/modules/swoole-server/methods/connection_info.md)
 
-
-
-#### bool swoole_server->sendMessage(string $message, int $dst_worker_id);
-
-Send message to worker processes by ID.
-
-Exmaple:
-
-``` php
-<?php
-$serv = new swoole_server("0.0.0.0", 9501);
-$serv->set(array(
-    'worker_num' => 2,
-    'task_worker_num' => 2,
-));
-$serv->on('pipeMessage', function($serv, $src_worker_id, $data) {
-    echo "#{$serv->worker_id} message from #$src_worker_id: $data\n";
-});
-$serv->on('task', function ($serv, $task_id, $from_id, $data){
-    var_dump($task_id, $from_id, $data);
-});
-$serv->on('finish', function ($serv, $fd, $from_id){
-
-});
-$serv->on('receive', function (swoole_server $serv, $fd, $from_id, $data) {
-    if (trim($data) == 'task')
-    {
-        $serv->task("async task coming");
-    }
-    else
-    {
-        $worker_id = 1 - $serv->worker_id;
-        $serv->sendMessage("hello task process", $worker_id);
-    }
-});
-
-$serv->start();
-```
-
-#### function swoole_server->exist(int $fd);
-
-Check whether the (TCP) file description is existed.
-
-#### function swoole_server->pause(int $fd);
-
-Pause the data receiving.
-
-> Only available in SWOOLE_BASE mode.
-
-#### function swoole_server->resume(int $fd);
-
-Resume the data receiving.
-
-> Only available in SWOOLE_BASE mode.
-
-#### function swoole_server->connection_info(int $fd, int $from_id, bool $ignore_close = false)
-
-Get the connection info, alias of function *swoole_server->getClientInfo()*.
-
-Example:
-
-``` php
-<?php
-$fdinfo = $serv->connection_info($fd);
-var_dump($fdinfo);
-array(5) {
-  ["from_id"]=>
-  int(3)
-  ["server_fd"]=>
-  int(14)
-  ["server_port"]=>
-  int(9501)
-  ["remote_port"]=>
-  int(19889)
-  ["remote_ip"]=>
-  string(9) "127.0.0.1"
-  ["connect_time"]=>
-  int(1390212495)
-  ["last_time"]=>
-  int(1390212760)
-}
-
-$udp_client = $serv->connection_info($fd, $from_id);
-var_dump($udp_client);
-```
 
 #### swoole_server::connection_list(int $start_fd = 0, int $pagesize = 10);
 
