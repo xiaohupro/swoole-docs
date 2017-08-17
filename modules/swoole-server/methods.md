@@ -29,11 +29,8 @@
 - [swoole_server->resume(int $fd)](/modules/swoole-server/methods/resume.md)
 - [swoole_server->connection_info(int $fd, int $from_id, bool $ignore_close = false)](/modules/swoole-server/methods/connection_info.md)
 - [swoole_server->connection_list(int $start_fd = 0, int $pagesize = 10)](/modules/swoole-server/methods/connection_list.md)
+- [swoole_server->bind(int $fd, int $uid)](/modules/swoole-server/methods/bind.md)
 
-
-#### bool swoole_server::bind(int $fd, int $uid)
-
-Bind the fd with system user UID.
 
 #### array swoole_server->stats();
 
