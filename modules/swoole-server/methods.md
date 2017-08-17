@@ -31,24 +31,9 @@
 - [swoole_server->connection_list(int $start_fd = 0, int $pagesize = 10)](/modules/swoole-server/methods/connection_list.md)
 - [swoole_server->bind(int $fd, int $uid)](/modules/swoole-server/methods/bind.md)
 - [swoole_server->stats()](/modules/swoole-server/methods/stats.md)
+- [swoole_server->task(mixed $data, int $dst_worker_id = -1)](/modules/swoole-server/methods/task.md)
+- [swoole_server->taskwait(mixed $task_data, float $timeout = 0.5, int $dst_worker_id = -1)](/modules/swoole-server/methods/taskwait.md)
 
-
-#### int swoole_server::task(mixed $data, int $dst_worker_id = -1);
-
-Send data to the task worker processes.
-
-Example:
-
-``` php
-<?php
-int swoole_server::task(mixed $data, int $dst_worker_id = -1) 
-$task_id = $server->task("some data");
-
-$server->task("taskcallback", -1, function (swoole_server $serv, $task_id, $data) {
-    echo "Task Callback: ";
-    var_dump($task_id, $data);
-});
-```
 
 #### string $result = swoole_server->taskwait(mixed $task_data, float $timeout = 0.5, int $dst_worker_id = -1);
 
