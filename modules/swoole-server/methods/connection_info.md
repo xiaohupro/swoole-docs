@@ -15,12 +15,14 @@ Get the connection info, alias of function *swoole_server->getClientInfo()*.
 #### Parameter
 
 * `$fd`	the id number of client
+* `$from_id` this parameter is needed, the swoole server is type of UDP
+* `$ignore_close` this method will return the information of connection even if the connection is closed
 
 #### Return
 
 the array of information of the `$fd` client 
 
-if the `$fd` client dosen't exist, the result id false 
+if the `$fd` client dosen't exist, the result is false 
 
 #### Example
 

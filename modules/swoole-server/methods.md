@@ -23,38 +23,13 @@
 - [swoole_server->sendfile(int $fd, string $filename, int $offset =0, int $length = 0)](/modules/swoole-server/methods/sendfile.md)
 - [swoole_server->sendto(string $ip, int $port, string $data, int $server_socket = -1)](/modules/swoole-server/methods/sendto.md)
 - [swoole_server->sendwait(int $fd, string $send_data)](/modules/swoole-server/methods/send_wait.md)
-- [swoole_server->swoole_server->sendMessage(string $message, int $dst_worker_id)](/modules/swoole-server/methods/sendMessage.md)
-- [swoole_server->swoole_server->exist(int $fd)](/modules/swoole-server/methods/exit.md)
-- [swoole_server->swoole_server->pause(int $fd)](/modules/swoole-server/methods/pause.md)
-- [swoole_server->swoole_server->resume(int $fd)](/modules/swoole-server/methods/resume.md)
-- [swoole_server->swoole_server->connection_info(int $fd, int $from_id, bool $ignore_close = false)](/modules/swoole-server/methods/connection_info.md)
+- [swoole_server->sendMessage(string $message, int $dst_worker_id)](/modules/swoole-server/methods/sendMessage.md)
+- [swoole_server->exist(int $fd)](/modules/swoole-server/methods/exit.md)
+- [swoole_server->pause(int $fd)](/modules/swoole-server/methods/pause.md)
+- [swoole_server->resume(int $fd)](/modules/swoole-server/methods/resume.md)
+- [swoole_server->connection_info(int $fd, int $from_id, bool $ignore_close = false)](/modules/swoole-server/methods/connection_info.md)
+- [swoole_server->connection_list(int $start_fd = 0, int $pagesize = 10)](/modules/swoole-server/methods/connection_list.md)
 
-
-#### swoole_server::connection_list(int $start_fd = 0, int $pagesize = 10);
-
-Get the list of all the TCP connections.
-
-Example:
-
-``` php
-<?php
-$start_fd = 0;
-while(true)
-{
-    $conn_list = $serv->connection_list($start_fd, 10);
-    if($conn_list===false or count($conn_list) === 0)
-    {
-        echo "finish\n";
-        break;
-    }
-    $start_fd = end($conn_list);
-    var_dump($conn_list);
-    foreach($conn_list as $fd)
-    {
-        $serv->send($fd, "broadcast");
-    }
-}
-```
 
 #### bool swoole_server::bind(int $fd, int $uid)
 
