@@ -30,27 +30,8 @@
 - [swoole_server->connection_info(int $fd, int $from_id, bool $ignore_close = false)](/modules/swoole-server/methods/connection_info.md)
 - [swoole_server->connection_list(int $start_fd = 0, int $pagesize = 10)](/modules/swoole-server/methods/connection_list.md)
 - [swoole_server->bind(int $fd, int $uid)](/modules/swoole-server/methods/bind.md)
+- [swoole_server->stats()](/modules/swoole-server/methods/stats.md)
 
-
-#### array swoole_server->stats();
-
-Get the TCP connections stats of the current server.
-
-Example result:
-
-``` php
-<?php
-array (
-  'start_time' => 1409831644,
-  'connection_num' => 1,
-  'accept_count' => 1,
-  'close_count' => 0,
-);
-array (
-  'task_queue_num' => 10,
-  'task_queue_bytes' => 65536,
-);
-```
 
 #### int swoole_server::task(mixed $data, int $dst_worker_id = -1);
 
