@@ -4,6 +4,8 @@
 
 The mode of dispatching connections to worker process.
 
+This parameter only works for the `SWOOLE_PROCESS` mode swoole_server.
+
 - `1`, polling mode. Dispatch the connection to the workers in sequence.
 
 - `2`, fixed mode(default value of `dispatch_mode`). Dispatch the connection to the worker according to the id number of connection. In this mode, the data from the same connection will be handled by the same worker process. 
@@ -19,3 +21,5 @@ The mode of dispatching connections to worker process.
 - stateless server: `3` is advised for synchronous and blocking server, `1` is advised for asynchronous and non-blocking server
 
 - stateful server: `2`, `4`, `5`
+
+If the `dispatch_mode` is `1` or `3`, the event of `connect` and `close` will be shielded.
