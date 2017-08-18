@@ -1,0 +1,3 @@
+## Configuration
+
+### max_conn
