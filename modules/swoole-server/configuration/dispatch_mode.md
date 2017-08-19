@@ -22,4 +22,5 @@ This parameter only works for the `SWOOLE_PROCESS` mode swoole_server.
 
 - stateful server: `2`, `4`, `5`
 
-If the `dispatch_mode` is `1` or `3`, the event of `connect` and `close` will be shielded.
+
+> If the `dispatch_mode` is `1` or `3`, the event of `connect` and `close` will be shielded.
