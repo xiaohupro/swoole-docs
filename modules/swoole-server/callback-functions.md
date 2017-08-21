@@ -28,6 +28,9 @@ There are thirteen types of event listed in the below table of contents.
 
 #### Order of events
 
+- All the callback functions of events are triggered after the start of swoole server.
+
+- The last event of swoole server is `onShutdown` when the swoole server shutdowns.
 
 
 
