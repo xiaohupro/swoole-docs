@@ -2,6 +2,10 @@
 
 ### Events List
 
+The swoole is an an high-performance network framework uses an event-driven, asynchronous, non-blocking I/O model makes it scalable and efficient. All the business logic is written in the callback functions of events. When a certain event is triggered, the swoole will call the callback function registered for the event. 
+
+There are thirteen types of event listed in the below table of contents.
+
 #### Table of Contents
 
  - [onStart](/modules/swoole-server/callback-functions/onstart.md)
@@ -22,6 +26,31 @@
  - [onManagerStart](/modules/swoole-server/callback-functions/onmanagerstart.md)
  - [onManagerStop](/modules/swoole-server/callback-functions/onmanagerstop.md)
 
+#### Order of events
+
+
+
+
+#### Catch Exception
+
+The swoole doesn't support the `set_exception_handler` function.
+
+If there is the logic of throwing exception in your code, it must add the `try/catch` in the very beginning of callback function.
+
+```php
+$serv->on('Timer', function() {
+    try
+    {
+        //some code
+    }
+    catch(Exception $e)
+    {
+        //exception code
+    }
+}
+```
+
+#### Example
 
 Example of registering event callback functions:
 
