@@ -4,7 +4,7 @@
 
 Set the output buffer size in the memory.
 
-The dafult value is 2M. The data to send can't be larger than `buffer_output_size` every times.
+The default value is 2M. The data to send can't be larger than `buffer_output_size` every times.
 
 #### Usage
 ```php
