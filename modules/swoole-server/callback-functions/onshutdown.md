@@ -8,7 +8,7 @@ Before the event `shutdown`, these operations below happened:
 
 - All threads are closed.
 - All the worker processed are closed.
-- Cancel the listening on the TCP/UDP port.
+- The listening on the TCP/UDP ports is closed.
 - The Reactor is closed.
 
 > Kill the process forcibly, like `kill -9`, will not trigger the call of function registered for `shutdown`. It needs to send `SIGTREM` by `kill -15`
