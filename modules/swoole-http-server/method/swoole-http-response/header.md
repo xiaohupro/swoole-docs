@@ -10,7 +10,7 @@ swoole_http_response->header(string $key, string $value)
 
 #### Illustration
 
-Set the header content of http response.
+Set the header of http response.
 
 #### Parameter
 
