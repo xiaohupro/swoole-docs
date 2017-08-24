@@ -1,22 +1,21 @@
-# Swoole HTTP server
+## Swoole HTTP server
 
 With 5 lines of code, you can write an Async non-blocking IO, multiple process HTTP server.
 
-### Events
+### Table of Contents
 
-* request
-* handshake
+* [Methods And Properties List](/modules/swoole-http-server/methods_properties.md)
 
-### Example
+* [Configurations List](/modules/swoole-http-server/configuration.md)
+
+### Example code
 
 ``` php
 <?php 
 $http = new swoole_http_server("127.0.0.1", 9501);
 
 $http->on('request', function ($request, $response) {
-
     $response->end("<h1>Hello World. #".rand(1000, 9999)."</h1>");
-
 });
 
 $http->start();
@@ -43,7 +42,7 @@ PHP extension compile configuration:
 ./configure --enable-openssl --enable-http2
 ```
 
-Swoole HTTP server configuration:
+### Swoole HTTP server configuration:
 
 ``` bash
 // Enable SSL
@@ -56,7 +55,7 @@ $server->set([
 ]);
 ```
 
-Nginx configuration:
+### Nginx configuration:
 
 ``` text
 server {
@@ -81,7 +80,6 @@ server {
 Callback functions can be registered on events:
 
 * request : HTTP request
-* handshake : HTTP2 handshake
 
 #### swoole_http_server->start();
 
