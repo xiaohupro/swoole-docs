@@ -12,11 +12,13 @@ Swoole server provides the API for developers to write TCP, UDP, Unix Socket asy
 
 * [Properties List](/modules/swoole-server/properties.md)
 
-* [Configuration List](/modules/swoole-server/configuration.md)
+* [Configurations List](/modules/swoole-server/configuration.md)
 
 * [Predefined Constants](/modules/swoole-server/predefined-constants.md)
 
 * [Callback functions](/modules/swoole-server/callback-functions.md)
+
+* [Listening On Multiple Ports](/modules/swoole-server/multiple_ports.md)
 
 * [Performance testing](/modules/swoole-server/performance-testing.md)
 
