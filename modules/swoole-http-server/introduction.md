@@ -2,11 +2,6 @@
 
 With 5 lines of code, you can write an Async non-blocking IO, multiple process HTTP server.
 
-### Table of Contents
-
-* [Methods And Properties List](/modules/swoole-http-server/methods_properties.md)
-
-* [Configurations List](/modules/swoole-http-server/configuration.md)
 
 ### Example code
 
@@ -22,6 +17,14 @@ $http->start();
 ```
 
 > swoole_http_server does not support the complete HTTP protocol, Nginx is recommended to be used as a proxy for Swoole HTTP server.
+
+### Table of Contents
+
+* [Methods And Properties List](/modules/swoole-http-server/methods_properties.md)
+
+* [Configurations List](/modules/swoole-http-server/configuration.md)
+
+* [Common Problems](/modules/swoole-http-server/common-problems.md)
 
 ### Performance
 

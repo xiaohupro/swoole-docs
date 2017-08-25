@@ -24,6 +24,12 @@ Swoole server provides the API to write TCP / UDP / UnixSocket servers.
 
 Swoole HTTP server provides the API to write HTTP servers.
 
+### [Methods And Properties List](/modules/swoole-http-server/methods_properties.md)
+
+### [Configurations List](/modules/swoole-http-server/configuration.md)
+
+### [Common Problems](/modules/swoole-http-server/common-problems.md)
+
 ## [Swoole WebSocket Server](/modules/swoole-websocket-server/introduction.md)
 
 Swoole WebSocket server provides the API to write WebSocket servers.
