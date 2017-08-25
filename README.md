@@ -161,7 +161,4 @@ Memory data structure likes Chan in Golang, implemented based on shared memory a
 
 Swoole locks enable PHP developers to use locks for data synchronisation between multiple threads or processes.
 
-*Copyright © 2017 [Swoole Development Group](https://github.com/swoole/swoole-src), all rights reserved.*
-
-
-
+*Copyright © 2017 [BAOKUN DOU](https://blog.eood.cn) & [Swoole Development Group](https://github.com/swoole/swoole-src), all rights reserved.*

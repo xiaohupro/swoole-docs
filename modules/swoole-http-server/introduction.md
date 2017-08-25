@@ -1,9 +1,10 @@
-## Swoole HTTP server
+# Swoole HTTP server
 
 With 5 lines of code, you can write an Async non-blocking IO, multiple process HTTP server.
 
+The `swoole_http_server` class inherits from the class `swoole_server`. It is a complete implementation of http server.
 
-### Example code
+## Example code
 
 ``` php
 <?php 
@@ -18,7 +19,7 @@ $http->start();
 
 > swoole_http_server does not support the complete HTTP protocol, Nginx is recommended to be used as a proxy for Swoole HTTP server.
 
-### Table of Contents
+## Table of Contents
 
 * [Methods And Properties List](/modules/swoole-http-server/methods_properties.md)
 
@@ -26,7 +27,7 @@ $http->start();
 
 * [Common Problems](/modules/swoole-http-server/common-problems.md)
 
-### Performance
+## Performance
 
 Compare with PHP-FPM, the default Golang HTTP server, the default Node.js HTTP server, Swoole HTTP server performs much better. It has the similar performance compare with the Nginx static files server. 
 
@@ -35,7 +36,7 @@ The experiment is done with benchmark tool Apache bench, on a normal PC server w
 ``` bash
 ab -c 200 -n 200000 -k http://127.0.0.1:9501
 ```
-### HTTP2 protocol support
+## HTTP2 protocol support
 
 Swoole HTTP server supports HTTP2 protocol thanks to *nghttp2* library. Openssl is required for HTTP2 protocol and the openssl has to support TLS1.2, ALPN and NPN. 
 
@@ -45,7 +46,7 @@ PHP extension compile configuration:
 ./configure --enable-openssl --enable-http2
 ```
 
-### Swoole HTTP server configuration:
+## Swoole HTTP server configuration:
 
 ``` bash
 // Enable SSL
@@ -58,7 +59,7 @@ $server->set([
 ]);
 ```
 
-### Nginx configuration:
+## Nginx configuration:
 
 ``` text
 server {
