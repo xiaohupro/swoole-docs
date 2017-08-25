@@ -10,7 +10,7 @@ string swoole_http_request->rawContent();
 
 #### Illustration
 
-Get the raw POST body. This method is used for the POST which isn't in form of `application/x-www-form-urlencoded`.
+Get the raw POST body. This method is used for the POST data which isn't in form of `application/x-www-form-urlencoded`.
 
 #### Return 
 
