@@ -34,6 +34,14 @@ Swoole HTTP server provides the API to write HTTP servers.
 
 Swoole WebSocket server provides the API to write WebSocket servers.
 
+### [Events And Callback Functions](/modules/swoole-websocket-server/events-callbacks.md)
+
+### [Methods List](/modules/swoole-websocket-server/methods.md)
+
+### [Predefined Contants](/modules/swoole-websocket-server/constants.md)
+
+### [Common Problems](/modules/swoole-websocket-server/common-problems.md)
+
 ## [Swoole Redis Server](/modules/swoole-redis-server/introduction.md)
 
 Swoole Redis server provides the API to write TCP servers with Redis protocol.
