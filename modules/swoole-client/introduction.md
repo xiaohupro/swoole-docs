@@ -11,14 +11,19 @@ Compare with PHP *stream* functions, *swoole_client* is more advanced:
 * swoole_client has better performance.
 * swoole_client supports async non-blocking callback, along with sync blocking and select API.
 
-### Events
+### Table of Contents
 
-* connect
-* receive
-* close
-* error 
-* bufferfull
-* bufferempty
+* [Methods List](/modules/swoole-client/methods.md)
+
+* [Callback functions](/modules/swoole-client/callback-functions.md)
+
+* [Properties List](/modules/swoole-client/properties.md)
+
+* [Predefined Constants](/modules/swoole-client/predefined-constants.md)
+
+* [Configurations List](/modules/swoole-client/configuration.md)
+
+* [Common Problems](/modules/swoole-client/common-problems.md)
 
 ### Examples
 

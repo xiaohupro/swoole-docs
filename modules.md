@@ -46,6 +46,10 @@ Swoole WebSocket server provides the API to write WebSocket servers.
 
 Swoole Redis server provides the API to write TCP servers with Redis protocol.
 
+### [Methods List](/modules/swoole-redis-server/methods.md)
+
+### [Predefineds Contants](/modules/swoole-redis-server/constants.md)
+
 ## [Swoole TCP/UDP Client](/modules/swoole-client/introduction.md)
 
 Swoole client provide the API to write TCP/UDP/UnixSocket/HTTP clients, supports IPv4/IPv6 protocol. Developers can write sync or async client side features with swoole client API.
@@ -111,5 +115,3 @@ Memory data structure likes Chan in Golang, implemented based on shared memory a
 ### [Swoole Lock](/modules/swoole-lock/introduction.md)
 
 Swoole locks enable PHP developers use locks for data synchronization between multiple theads or processes.
-
-
