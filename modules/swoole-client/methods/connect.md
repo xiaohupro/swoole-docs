@@ -18,7 +18,8 @@ Connect to the remote TCP/UDP port.
 
 * `$host`	  the ip address the client connects to
 * `$port`     the port the client connects to
-* `$timeout`  the timeout(second), the dafault value is 0.1
+* `$timeout`  the timeout(second) of connect/send/recv, the dafault value is 0.1s
+* `$flag`     if the type of client is UCP,  
 
 #### Return
 
