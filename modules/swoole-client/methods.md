@@ -12,3 +12,5 @@ $client = new Swoole\Client(SWOOLE_TCP | SWOOLE_ASYNC | SWOOLE_SSL);
 
 - [swoole_client::__construct](/modules/swoole-client/methods/construct.md)
 - [swoole_client->set(array $setting)](/modules/swoole-client/methods/set.md)
+- [swoole_client->on(string $event, mixed $callback)](/modules/swoole-client/methods/on.md)
+- [swoole_client->connect(string $host, int $port, float $timeout = 0.1, int $flag = 0)](/modules/swoole-client/methods/connect.md)

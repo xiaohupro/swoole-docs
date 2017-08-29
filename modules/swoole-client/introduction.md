@@ -70,36 +70,6 @@ $client->connect('127.0.0.1', 9501);
 
 
 
-#### int swoole_client::on(string $event, mixed $callback);
-
-> Only can be used in async mode.
-
-Set the callback functions for the events:
-
-* connect
-* receive
-* close
-* error 
-* BufferFull
-* BufferEmpty
-
-> connect/close events will be emitted immediately when UDP client is created or closed.
-
-#### bool $swoole_client->connect(string $host, int $port, float $timeout = 0.1, int $flag = 0)
-
-Connect to the remote TCP/UDP port.
-
-Example:
-
-``` php
-<?php
-if ($cli->connect('127.0.0.1', 9501)) {
-      $cli->send("data");
-} else {
-      echo "connect failed.";
-}
-```
-
 #### bool swoole_client->isConnected()
 
 Check if the connection is established.
