@@ -94,12 +94,6 @@ Receive data from the remote socket.
 Close the connection.
 
 
-
-
-#### swoole_client->getpeername();
-
-Get the remote socket name of the connection.
-
 #### swoole_client->getPeerCert()
 
 Get the Cert of the remote server.

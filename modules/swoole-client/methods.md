@@ -17,3 +17,5 @@ $client = new Swoole\Client(SWOOLE_TCP | SWOOLE_ASYNC | SWOOLE_SSL);
 - [swoole_client->isConnected()](/modules/swoole-client/methods/isconnected.md)
 - [swoole_client->getSocket()](/modules/swoole-client/methods/getsocket.md)
 - [swoole_client->getSockName()](/modules/swoole-client/methods/getsockname.md)
+- [swoole_client->getPeerName()](/modules/swoole-client/methods/getpeername.md)
+- [swoole_client->getPeerCert()](/modules/swoole-client/methods/getpeercert.md)
