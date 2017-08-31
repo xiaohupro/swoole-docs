@@ -70,9 +70,6 @@ $client->connect('127.0.0.1', 9501);
 
 
 
-#### bool swoole_client->isConnected()
-
-Check if the connection is established.
 
 #### int $swoole_client->send(string $data);
 
@@ -96,23 +93,8 @@ Receive data from the remote socket.
 
 Close the connection.
 
-#### swoole_client->getSocket();
 
-Get the TCP socket of the connection.
 
-Example:
-
-``` php
-<?php
-$socket = $client->getSocket();
-if (!socket_set_option($socket, SOL_SOCKET, SO_REUSEADDR, 1)) {
-    echo 'Unable to set option on socket: '. socket_strerror(socket_last_error()) . PHP_EOL;
-}
-```
-
-#### swoole_client->getsockname();
-
-Get the local socket name of the connection.
 
 #### swoole_client->getpeername();
 
