@@ -19,3 +19,4 @@ $client = new Swoole\Client(SWOOLE_TCP | SWOOLE_ASYNC | SWOOLE_SSL);
 - [swoole_client->getSockName()](/modules/swoole-client/methods/getsockname.md)
 - [swoole_client->getPeerName()](/modules/swoole-client/methods/getpeername.md)
 - [swoole_client->getPeerCert()](/modules/swoole-client/methods/getpeercert.md)
+- [swoole_client->sendto(string $ip, int $port, string $data)](/modules/swoole-client/methods/sendto.md)

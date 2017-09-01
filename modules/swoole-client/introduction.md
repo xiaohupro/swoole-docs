@@ -66,18 +66,9 @@ $client->connect('127.0.0.1', 9501);
 
 > Note, the async TCP client can not be used in PHP-FPM or Apache mode, only can be used in Swoole server.
 
-
-
-
-
-
 #### int $swoole_client->send(string $data);
 
 Send data to the remote TCP socket.
-
-#### bool swoole_client->sendto(string $ip, int $port, string $data);
-
-Send data to the remote UDP address.
 
 #### bool swoole_client->sendfile(string $filename, int $offset = 0, int $length = 0)
 
@@ -92,11 +83,6 @@ Receive data from the remote socket.
 #### bool $swoole_client->close(bool $force = false);
 
 Close the connection.
-
-
-#### swoole_client->getPeerCert()
-
-Get the Cert of the remote server.
 
 #### swoole_client->sleep()
 
