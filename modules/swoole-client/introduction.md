@@ -70,12 +70,6 @@ $client->connect('127.0.0.1', 9501);
 
 Send data to the remote TCP socket.
 
-#### bool swoole_client->sendfile(string $filename, int $offset = 0, int $length = 0)
-
-Send file to the remote TCP socket.
-
-> This is a wrapper of the Linux *sendfile* system call.
-
 #### string $swoole_client->recv(int $size = 65535, int $flags = 0);
 
 Receive data from the remote socket.

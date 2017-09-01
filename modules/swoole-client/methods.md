@@ -20,3 +20,5 @@ $client = new Swoole\Client(SWOOLE_TCP | SWOOLE_ASYNC | SWOOLE_SSL);
 - [swoole_client->getPeerName()](/modules/swoole-client/methods/getpeername.md)
 - [swoole_client->getPeerCert()](/modules/swoole-client/methods/getpeercert.md)
 - [swoole_client->sendto(string $ip, int $port, string $data)](/modules/swoole-client/methods/sendto.md)
+- [swoole_client->sendfile(string $filename, int $offset = 0, int $length = 0)](/modules/swoole-client/methods/sendfile.md)
+
