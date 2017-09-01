@@ -74,9 +74,6 @@ Send data to the remote TCP socket.
 
 Receive data from the remote socket.
 
-#### bool $swoole_client->close(bool $force = false);
-
-Close the connection.
 
 #### swoole_client->sleep()
 
