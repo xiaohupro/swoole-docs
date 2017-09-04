@@ -22,3 +22,5 @@ $client = new Swoole\Client(SWOOLE_TCP | SWOOLE_ASYNC | SWOOLE_SSL);
 - [swoole_client->sendto(string $ip, int $port, string $data)](/modules/swoole-client/methods/sendto.md)
 - [swoole_client->sendfile(string $filename, int $offset = 0, int $length = 0)](/modules/swoole-client/methods/sendfile.md)
 - [swoole_client->close(bool $force = false)](/modules/swoole-client/methods/close.md)
+- [swoole_client->sleep()](/modules/swoole-client/methods/sleep.md)
+- [swoole_client->wakeup()](/modules/swoole-client/methods/wakeup.md)

@@ -74,27 +74,6 @@ Send data to the remote TCP socket.
 
 Receive data from the remote socket.
 
-
-#### swoole_client->sleep()
-
-Remove the TCP client from system event loop.
-
-#### swoole_client->wakeup()
-
-Add the TCP client into the system event loop.
-
-Example:
-
-``` php
-<?php
-$client->on("receive", function(swoole_client $cli, $data){
-    $cli->sleep();
-    swoole_timer_after(5000, function() use ($cli) {
-        $cli->wakeup();
-    });
-});
-```
-
 #### swoole_client->enableSSL()
 
 Enable the SSL for the TCP client.
