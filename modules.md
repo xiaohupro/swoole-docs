@@ -54,6 +54,18 @@ Swoole Redis server provides the API to write TCP servers with Redis protocol.
 
 Swoole client provide the API to write TCP/UDP/UnixSocket/HTTP clients, supports IPv4/IPv6 protocol. Developers can write sync or async client side features with swoole client API.
 
+### [Methods List](/modules/swoole-client/methods.md)
+
+### [Callback functions](/modules/swoole-client/callback-functions.md)
+
+### [Properties List](/modules/swoole-client/properties.md)
+
+### [Predefined Constants](/modules/swoole-client/predefined-constants.md)
+
+### [Configurations List](/modules/swoole-client/configuration.md)
+
+### [Common Problems](/modules/swoole-client/common-problems.md)
+
 ## [Swoole Process Manager](/modules/swoole-process/introduction.md)
 
 Linux process management module can be used to create new Linux process, manage the processes, and the communication between different processes.
