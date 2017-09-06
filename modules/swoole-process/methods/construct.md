@@ -18,10 +18,13 @@ Construct a child process with the callback function executed in the child proce
 
 #### Parameter
 
-void
+- `$function` the callback function executed in the child process
+
+- `$redirect_stdin_stdout`
+
+- `$create_pipe`
 
 #### Return
 
-void
 
 #### Example
