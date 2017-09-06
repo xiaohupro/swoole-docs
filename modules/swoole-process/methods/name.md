@@ -7,17 +7,40 @@
 #### Prototype
 
 ```php
-bool swoole_process->name(string $new_process_name);
+swoole_process->name(string $new_process_name);
 ```
 
 #### Illustration
 
 Set name of the process started.
 
+> After the call of `swoole_process->call`, the name will be resetted
+
 #### Parameter
 
-void
+- `$new_process_name` string
 
 #### Return
 
-the pid of child process, or return false if the fork is failed. You can use `swoole_errno` and `swoole_strerror` to get the code and information of error.
+void
+
+#### Example
+```
+<?php
+$process = new swoole_process(function($worker){
+    echo "the pid of child process is " . $worker->pid . "\n";
+    echo "the file descriptor of pipe is " . $worker->pipe . "\n";
+    
+    $worker->write("Hello main process\n");
+    
+    $worker->name("php child process"); // set name of the process
+    
+    sleep(100);
+}, false, true);
+
+$process->start();
+
+usleep(100);
+
+echo $process->read();
+```
