@@ -16,11 +16,15 @@ Write and push data into the message queue.
 
 #### Parameter
 
-- `$data`
+- `$data` the data to push to the queue, the default value is 8192 Bytes and the max value is 65536 Bytes.
 
 #### Return
 
-int
+if failed, it returns `false`. Or it return `true`.
+
+In the blocking mode, if the queue is full, the call of this method will block.
+
+In the non-blocking mode, if the queue is full, the call of this method will return `false` immediately.
 
 #### Example
 ``` php
