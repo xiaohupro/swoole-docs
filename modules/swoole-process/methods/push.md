@@ -20,7 +20,7 @@ Write and push data into the message queue.
 
 #### Return
 
-if failed, it returns `false`. Or it return `true`.
+if failed, it returns `false`. Or it returns `true`.
 
 In the blocking mode, if the queue is full, the call of this method will block.
 

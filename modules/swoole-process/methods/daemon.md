@@ -14,14 +14,11 @@ bool swoole_process->daemon(bool $nochdir = true, bool $noclose = true);
 
 Change the process to be a daemon process.
 
-* $nochdir: whether change the current path.
-* $noclose: whether close the standard I/O of the process.
-
 #### Parameter
 
-- `$nochdir`
+* $nochdir: whether change the current path.
 
-- `$noclose`
+* $noclose: whether close the standard I/O of the process.
 
 #### Return
 
