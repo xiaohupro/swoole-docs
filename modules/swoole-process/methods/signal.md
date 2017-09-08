@@ -16,9 +16,9 @@ Setup signal callback function.
 
 #### Parameter
 
-- `$signo`
+- `$signo` the signal 
 
-- `$callback`
+- `$callback` the callback function called when the signal is triggered
 
 #### Return
 
