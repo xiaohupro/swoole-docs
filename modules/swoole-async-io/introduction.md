@@ -2,9 +2,6 @@
 
 The task process in swoole_server is syncing and blocking without using EventLoop, can't benefit from Async I/O.
 
-### Events
-
-NA
 
 ### Methods
 
@@ -13,14 +10,27 @@ NA
 Update the Async I/O options:
 
 * thread_num: number of async file I/O threads
+
 * aio_mode: AIO mode: SWOOLE_AIO_BASE/SWOOLE_AIO_LINUX
+
 * enable_signalfd: whether enable signalfd
+
 * socket_buffer_size: socket buffer size
+
 * socket_dontwait: do not block when the buffer is full
+
+```php
+<?php
+swoole_async_set(array(
+    'aio_mode' => SWOOLE_AIO_LINUX,
+));
+```
 
 #### swoole_async_readfile(string $filename, mixed $callback);
 
-Read files in the async way.
+Read files in the async way. When the operation of reading content from file finished, the callback registered is callback automatically.
+
+The max length of file is 4M.
 
 Example:
 
@@ -33,7 +43,16 @@ swoole_async_readfile(__DIR__."/server.php", function($filename, $content) {
 
 #### swoole_async_writefile(string $filename, string $fileContent, callable $callback = null, int $flags = 0)
 
-Write file in the async way.
+Write file in the async way. When the operation of writing content to file finished, the callback registered is callback automatically.
+
+- `$filename` the file path of file. If fail to open this file, the method return false; 
+
+- `$fileContent` the content to write to the file, The max length is 4M.
+
+- `$callback` the callback function triggered when the operation of writing content to file finished.
+
+- `$flags` `FILE_APPEND`: append content to the end of file.
+            If the aio mode setted by `swoole_async_set` is `SWOOLE_AIO_BASE`, the method can't support append content to the end of file and must set the value of `$fileContent` to integer multiples of 4096.
 
 Example:
 
@@ -49,6 +68,22 @@ swoole_async_writefile('test.log', $file_content, function($filename) {
 Read the file content stream in the async way. When the operation of reading content from file finished, the callback registered is callback automatically.
 
 The difference between this method and `swoole_async_readfile` is that the former reads file by fragment and uses less memory. This method reads content of `$size` length from file every time and can be used to read big file.
+
+- `$size` the size of content to read from file
+
+The callback function prototype is :
+```
+bool callback(string $filename, string $content);
+```
+- `$filename` the name of file
+
+- `$content` the content readed from the file.
+
+You can control that if continue to read file by return true or false in the callback function.
+
+- `return true;` continue to read file
+
+- `return false;` stop to read file and close file
 
 #### bool swoole_async_write(string $filename, string $content, int $offset = -1, mixed $callback = NULL);
 
