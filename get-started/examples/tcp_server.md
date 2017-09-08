@@ -16,7 +16,7 @@ $server->on('connect', function($server, $fd){
 // Register the function for the event of receiving
 $server->on('receive', function($server, $fd, $from_id, $data){
     $server->send($fd, "Server: " . $data);
-};
+});
 
 // Register the function for the event of close
 $server->on('close', function($server, $fd){
