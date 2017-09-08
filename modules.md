@@ -70,6 +70,8 @@ Swoole client provide the API to write TCP/UDP/UnixSocket/HTTP clients, supports
 
 Linux process management module can be used to create new Linux process, manage the processes, and the communication between different processes.
 
+### [Methods List](/modules/swoole-process/methods.md)
+
 ## [Swoole Async File I/O](/modules/swoole-async-io/introduction.md)
 
 Async API includes the async File IO API, Timer, async HTTP client API, async MySQL client API,  async Redis client API and async DNS client API.
